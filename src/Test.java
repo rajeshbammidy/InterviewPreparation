@@ -1,6 +1,7 @@
 import oracle.sql.ARRAY;
 
 import java.lang.reflect.Array;
+import java.math.BigInteger;
 import java.util.*;
 
 /**
@@ -10,73 +11,58 @@ import java.util.*;
 
 
 public class Test {
-    public int solve(ArrayList<Integer> list, ArrayList<Integer> counts) {
-        int pat = 0;
-        for (int x : counts) pat += x;
+    public ArrayList<Integer> solve(ArrayList<Integer> listA, ArrayList<Integer> listB, int sum) {
 
-        int arr[] = new int[100000];
+        int ans = Integer.MAX_VALUE;
 
-        for (int i = 0; i < counts.size(); i++) {
-            arr[i + 1] = counts.get(i);
-        }
-        int copy[]=arr.clone();
-        int left = 0;
-        int c = 0;
-        int ans = 0;
-        int flag = -1;
-        int minlen = Integer.MAX_VALUE;
-        int start = 0;
-        int end = 0;
-        for (int right = 0; right < list.size(); right++) {
-
-            if (--arr[list.get(right)] >= 0) c++;
-            while (c == pat) {
-                flag = 1;
-                if (minlen > right - left + 1) {
-                    minlen = right - left + 1;
-                    start = left;
-                    end = right;
-                }
-                if (++arr[list.get(left)] > 0) {
-                    c--;
-                }
-                left++;
-
+        int m = listA.size();
+        int n = listB.size();
+        int i = 0;
+        int j = n - 1;
+        int c = 0, d = 0;
+        int prevj = Integer.MAX_VALUE;
+        while (i < m && j >= 0) {
+            int a = listA.get(i);
+            int b = listB.get(j);
+            int dif = Math.abs(listA.get(i) + listB.get(j) - sum);
+            if (dif < ans || (dif == ans && j < prevj)) {
+                ans = dif;
+                c = listA.get(i);
+                d = listB.get(j);
             }
-        }
-        if (flag == -1) return -1;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int s = start;
-        int e = end;
-        while (s <= e) {
-            //System.out.print(list.get(s) + " ");
-            int val = list.get(s++);
 
-            map.put(val, map.getOrDefault(val, 0) + 1);
+            if (a + b > sum) {
+
+                prevj = j;
+                j--;
+            } else {
+                i++;
+            }
+
         }
 
-       // System.out.println(map);
-        for (Map.Entry<Integer, Integer> x : map.entrySet()) {
-
-            if (x.getKey() >= copy.length){
-                ans += x.getValue();
-            }
-            else if (copy[x.getKey()] == 0){
-                ans += x.getValue();
-            }
-            else if (copy[x.getKey()] < x.getValue()){
-                ans += x.getValue() - copy[x.getKey()];
-            }
-        }
-        return ans;
+        ArrayList<Integer> res = new ArrayList<>(Arrays.asList(new Integer[]{c, d}));
+        return res;
 
     }
 
-
     public static void main(String[] args) throws Exception {
-ArrayList<Integer> l=new ArrayList<>(Arrays.asList(new Integer[]{1,1,5, 2, 3, 4,5, 1}));
-ArrayList<Integer> c=new ArrayList<>(Arrays.asList(new Integer[]{2, 1, 1, 0}));
-        System.out.println(new Test().solve(l,c));
+        Integer arr[] = {1, 6, 1, 4, 5, 2};
+        ArrayList<Integer> res = new ArrayList<>(Arrays.asList(arr));
+
+
+        String title = getTitle("Find the closest pair from two sorted arrays");
+        System.out.println(title);
+
+    }
+
+    private static String getTitle(String str) {
+        String res = "";
+        for (String x : str.split("\\s")) {
+            res += (x.charAt(0) + "").toUpperCase() + x.substring(1);
+        }
+        return res;
+
     }
 
 
