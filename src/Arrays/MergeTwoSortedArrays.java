@@ -1,11 +1,9 @@
-package Arrays_GFG;
+package Arrays;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
- * Created by RajeshAatrayan|InterviewPreparation|Arrays_GFG|MergeTwoSortedArrays.java| on Jul,2019
+ * Created by RajeshAatrayan|InterviewPreparation|Arrays|MergeTwoSortedArrays.java| on Jul,2019
  * Happy Coding :)
  */
 

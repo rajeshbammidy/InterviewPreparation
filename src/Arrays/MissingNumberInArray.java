@@ -1,10 +1,10 @@
-package Arrays_GFG;
+package Arrays;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * Created by RajeshAatrayan|InterviewPreparation|Arrays_GFG|MissingNumberInArray.java| on Jul,2019
+ * Created by RajeshAatrayan|InterviewPreparation|Arrays|MissingNumberInArray.java| on Jul,2019
  * Happy Coding :)
  */
 public class MissingNumberInArray {
