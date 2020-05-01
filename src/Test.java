@@ -22,26 +22,17 @@ class LRUCache {
 }
 
 public class Test {
-    public boolean canJump(int[] nums) {
-        int dp[] = new int[nums.length];
-        Arrays.fill(dp, Integer.MAX_VALUE);
-        dp[0] = 0;
-        for (int i = 1; i < nums.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (j + nums[j] >= i) {
-                    dp[i] = Math.min(dp[j] + 1, dp[i]);
-                }
-            }
-            if (dp[i] == Integer.MAX_VALUE) return false;
-        }
-        return true;
-
-    }
 
     public static void main(String[] args) {
-        System.out.println(Integer.toBinaryString(74));
 
-
-        // System.out.println(new Test().subarraySum(new int[]{-1, -1, 1}, 0));
+        Test firstUnique = new Test();
+        firstUnique.FirstUnique(new int[]{7, 7, 7, 7, 7, 7});
+        firstUnique.showFirstUnique(); // return -1
+        firstUnique.add(7);            // the queue is now [7,7,7,7,7,7,7]
+        firstUnique.add(3);            // the queue is now [7,7,7,7,7,7,7,3]
+        firstUnique.add(3);            // the queue is now [7,7,7,7,7,7,7,3,3]
+        firstUnique.add(7);            // the queue is now [7,7,7,7,7,7,7,3,3,7]
+        firstUnique.add(17);           // the queue is now [7,7,7,7,7,7,7,3,3,7,17]
+        firstUnique.showFirstUnique(); // return 17
     }
 }
