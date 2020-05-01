@@ -1,22 +1,14 @@
-
-
-import com.sun.deploy.util.ArrayUtil;
-import netscape.security.UserTarget;
-import org.omg.CORBA.INTERNAL;
-import org.omg.CORBA.MARSHAL;
-
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.util.*;
+package Trees;
 
 /**
- * Created by RajeshAatrayan|InterviewPreparation|PACKAGE_NAME|null.java| on Oct,2019
+ * Created by RajeshAatrayan|InterviewPreparation|Trees|CheckIfaStringIsaValidSequencefromRoottoLeavesPathinaBinaryTree| on May,2020
+ *  
  * Happy Coding :)
- */
+ **/
 
+/**
+ * Class definition
+ */
 class TreeNode {
     int val;
     TreeNode left;
@@ -27,7 +19,7 @@ class TreeNode {
     }
 }
 
-public class Test {
+public class CheckIfaStringIsaValidSequencefromRoottoLeavesPathinaBinaryTree {
     static String obt = "";
     static boolean res = false;
 
@@ -46,11 +38,13 @@ public class Test {
             obt += root.val;
             preorder(root.left, given);
             preorder(root.right, given);
+            //If the current node is a leaf node
             if (root.left == null && root.right == null) {
                 if (obt.equals(given)) {
                     res = true;
                 }
             }
+            //delete the appended character
             if (obt.length() != 0) ;
             obt = obt.substring(0, obt.length() - 1);
 
@@ -60,8 +54,4 @@ public class Test {
 
     }
 
-    public static void main(String[] args) {
-
-
-    }
 }
