@@ -28,39 +28,12 @@ class TreeNode {
 }
 
 public class Test {
-    static String obt = "";
-    static boolean res = false;
 
-    public boolean isValidSequence(TreeNode root, int[] arr) {
-        String given = "";
-        obt = "";
-        res = false;
-        for (int x : arr) given += x;
-        preorder(root, given);
-        return res;
-
-    }
-
-    private void preorder(TreeNode root, String given) {
-        if (root != null) {
-            obt += root.val;
-            preorder(root.left, given);
-            preorder(root.right, given);
-            if (root.left == null && root.right == null) {
-                if (obt.equals(given)) {
-                    res = true;
-                }
-            }
-            if (obt.length() != 0) ;
-            obt = obt.substring(0, obt.length() - 1);
-
-
-        }
-
-
-    }
 
     public static void main(String[] args) {
+//3*10 - 2%5/2sou
+
+        System.out.println(30-2%5/2);
 
 
     }
