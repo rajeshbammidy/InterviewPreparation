@@ -6,6 +6,7 @@ import org.omg.CORBA.INTERNAL;
 import org.omg.CORBA.MARSHAL;
 
 
+import javax.print.attribute.HashAttributeSet;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.lang.reflect.Array;
@@ -19,19 +20,18 @@ import java.util.*;
 
 
 public class Test {
-    public int numJewelsInStones(String J, String S) {
-
+    public boolean canConstruct(String ransomNote, String magazine) {
         HashMap<Character, Integer> map = new HashMap<>();
-        for (char ch : S.toCharArray()) {
+        for (char ch : magazine.toCharArray()) {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
-        int sum = 0;
-        for (char ch : J.toCharArray()) {
-            if (map.get(ch) != null) {
-                sum += map.get(ch);
+        for (char ch : ransomNote.toCharArray()) {
+            if (map.get(ch) == null || map.get(ch) <= 0) {
+                return false;
             }
+            map.put(ch, map.get(ch) - 1);
         }
-        return sum;
+        return true;
 
     }
 
