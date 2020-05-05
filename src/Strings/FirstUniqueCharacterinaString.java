@@ -1,26 +1,24 @@
+package Strings;
 
-
-import com.sun.deploy.util.ArrayUtil;
-import netscape.security.UserTarget;
-import org.omg.CORBA.INTERNAL;
-import org.omg.CORBA.MARSHAL;
-
-
-import javax.print.attribute.HashAttributeSet;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.util.*;
+import java.util.Arrays;
 
 /**
- * Created by RajeshAatrayan|InterviewPreparation|PACKAGE_NAME|null.java| on Oct,2019
+ * Created by RajeshAatrayan|InterviewPreparation|Strings|FirstUniqueCharacterinaString| on May,2020
+ *  
  * Happy Coding :)
- */
-
-
-public class Test {
-
+ *
+ * Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+ *
+ * Examples:
+ *
+ * s = "leetcode"
+ * return 0.
+ *
+ * s = "loveleetcode",
+ * return 2.
+ * Note: You may assume the string contain only lowercase letters.
+ **/
+public class FirstUniqueCharacterinaString {
     public int firstUniqChar(String s) {
         int arr[] = new int[26];
         Arrays.fill(arr, -1);
@@ -37,13 +35,6 @@ public class Test {
                 min = Math.min(min, arr[i]);
         }
         return min == Integer.MAX_VALUE ? -1 : min;
-
-    }
-
-    public static void main(String[] args) {
-//3*10 - 2%5/2sou
-        System.out.println(new Test().firstUniqChar("loveleetcode"));
-
 
     }
 }
