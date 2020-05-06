@@ -21,28 +21,28 @@ import java.util.*;
 
 public class Test {
 
-    public int firstUniqChar(String s) {
-        int arr[] = new int[26];
-        Arrays.fill(arr, -1);
-        for (int i = 0; i < s.length(); i++) {
-            if (arr[s.charAt(i) - 'a'] == -1) {
-                arr[s.charAt(i) - 'a'] = i;
-            } else {
-                arr[s.charAt(i) - 'a'] = Integer.MAX_VALUE;
+    public int majorityElement(int[] nums)
+    {
+        Stack<Integer> stack=new Stack<>();
+        for(int x:nums){
+
+            if(stack.isEmpty()){
+                stack.add(x);
+                continue;
             }
+            if(stack.peek()==x){
+                stack.add(x);
+            }
+            else
+            stack.pop();
         }
-        int min = Integer.MAX_VALUE;
-        for (int i = 0; i < 26; i++) {
-            if (arr[i] != -1)
-                min = Math.min(min, arr[i]);
-        }
-        return min == Integer.MAX_VALUE ? -1 : min;
+        return stack.peek();
 
     }
 
     public static void main(String[] args) {
 //3*10 - 2%5/2sou
-        System.out.println(new Test().firstUniqChar("loveleetcode"));
+        System.out.println(new Test().majorityElement(new int[]{3,2,3}));
 
 
     }
