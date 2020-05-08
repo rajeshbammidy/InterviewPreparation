@@ -19,30 +19,19 @@ import java.util.*;
  */
 
 
+
 public class Test {
+    int parent1;
+    int parent2;
+    int d1;
+    int d2;
+    int curDepth;
 
-    public int majorityElement(int[] nums)
-    {
-        Stack<Integer> stack=new Stack<>();
-        for(int x:nums){
 
-            if(stack.isEmpty()){
-                stack.add(x);
-                continue;
-            }
-            if(stack.peek()==x){
-                stack.add(x);
-            }
-            else
-            stack.pop();
-        }
-        return stack.peek();
-
-    }
 
     public static void main(String[] args) {
 //3*10 - 2%5/2sou
-        System.out.println(new Test().majorityElement(new int[]{3,2,3}));
+
 
 
     }
