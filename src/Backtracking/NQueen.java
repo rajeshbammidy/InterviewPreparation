@@ -1,4 +1,4 @@
-package backtracking;
+package Backtracking;
 
 public class NQueen {
 	private static int board[][]=new int[11][11];
