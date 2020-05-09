@@ -18,27 +18,24 @@ import java.util.*;
  * Happy Coding :)
  */
 public class Test {
-    public boolean checkStraightLine(int[][] coordinates) {
-        if (coordinates.length == 2) return true;
-        for (int i = 0; i < coordinates.length - 2; i++) {
-            int x1 = coordinates[i][0];
-            int y1 = coordinates[i][1];
-            int x2 = coordinates[i + 1][0];
-            int y2 = coordinates[i + 1][1];
-            int x3 = coordinates[i + 2][0];
-            int y3 = coordinates[i + 2][1];
+    public static boolean isPerfectSquare(int num) {
+        if (num == 1 || num == 0) return false;
+        long beg = 1;
+        long end = num;
+        while (beg <= end) {
+            long mid = beg + (end - beg) / 2;
+            if (mid * mid == num) return true;
 
-            int lhs = (y2 - y1) * (x3 - x2);
-            int rhs = (y3 - y2) * (x2 - x1);
-            if (lhs != rhs) return false;
+            if (mid * mid < num) beg = mid + 1;
+            else end = mid - 1;
+
         }
-        return true;
+        return false;
 
     }
 
-
     public static void main(String[] args) {
-
+        System.out.println(isPerfectSquare(1));
 
     }
 }
