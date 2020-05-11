@@ -18,29 +18,62 @@ import java.util.*;
  * Happy Coding :)
  */
 public class Test {
-    public static int findJudge(int n, int[][] trust) {
-        if(n==1)return 1;
-        int trustLen = trust.length;
-        if (trustLen < n - 1) return -1;
-        int dp[] = new int[n + 1];
-        int max = 0;
-        HashSet<Integer> set = new HashSet<>();
-        for (int i = 0; i < trustLen; i++) {
-            dp[trust[i][1]]++;
-            set.add(trust[i][0]);
-            if (dp[trust[i][1]] > dp[max]) {
-                max = trust[i][1];
+
+    static class node {
+        int x;
+        int y;
+
+        public node(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+
+        int rows[] = new int[]{-1, 0, 1, 0};
+        int cols[] = new int[]{0, 1, 0, -1};
+        int m = image.length;
+        int n = image[0].length;
+
+        Queue<node> queue = new LinkedList<>();
+        queue.add(new node(sr, sc));
+        int target = image[sr][sc];
+        image[sr][sc] = -1;
+        while (!queue.isEmpty()) {
+            node temp = queue.poll();
+            int x = temp.x;
+            int y = temp.y;
+            for (int i = 0; i < 4; i++) {
+
+                if (isValid(x + rows[i], y + cols[i], m, n) && image[x + rows[i]][y + cols[i]] == target) {
+                    image[x + rows[i]][y + cols[i]] = -1;
+                    queue.add(new node(x + rows[i], y + cols[i]));
+                }
+
+            }
+
+        }
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (image[i][j] == -1) image[i][j] = newColor;
             }
         }
-
-        if (set.contains(max)) return -1;
-        return dp[max] == n - 1 ? max : -1;
+        return image;
 
 
     }
 
-    public static void main(String[] args) {
+    private boolean isValid(int x, int y, int m, int n) {
+        return x >= 0 && x < m && y >= 0 && y < n;
 
-        System.out.println(findJudge(4, new int[][]{{3, 2}, {4, 1}, {3, 1}, {2, 1}, {2, 3}, {4, 3}, {4, 2}, {3, 4}}));
+    }
+
+
+    public static void main(String[] args) {
+        int arr[][] = new int[][]{{0, 0, 0}, {0, 1, 1}};
+        System.out.println(Arrays.deepToString(new Test().floodFill(arr, 1, 1, 1)));
+
+
     }
 }

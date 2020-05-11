@@ -1,62 +1,70 @@
 package Backtracking;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NQueen {
-	private static int board[][]=new int[11][11];
+    public List<List<String>> solveNQueens(int n) {
+        List<List<String>> res = new ArrayList<>();
+        if (n == 1) {
+            ArrayList<String> temp = new ArrayList<>();
+            temp.add("Q");
+            res.add(temp);
+            return res;
+        }
+        if (n == 2) return res;
+        ArrayList<Integer> cols = new ArrayList<>();
+        backtrack(n, res, 0, cols);
+        return res;
 
-	public static void main(String[] args) {
-		
-		placeNQueen(4);//which means 4x4 matrix;
+    }
 
-	}
+    private void backtrack(int n, List<List<String>> res, int row, ArrayList<Integer> cols) {
 
-	private static void placeNQueen(int n) {
-		
-		nQueenHelper(n,0);//where n=size and 0 is the row
-	}
+        if (row == n) {
 
-	private static void nQueenHelper(int n, int row) {
-		if(row==n) {//we need to print the possible solution
-			for(int i=0;i<n;i++) {
-				for(int j=0;j<n;j++) {
-					System.out.print(board[i][j]+" ");
-				}
-				System.out.println();
-			}
-			System.out.println("----------------------------------------");
-		}
-		
-		for(int j=0;j<n;j++) {
-			if(isPossible(n,row,j)) {
-				board[row][j]=1;
-				nQueenHelper(n, row+1);
-				board[row][j]=0;
-				
-			}
-		}
-		
-		
-	}
+            ArrayList<String> temp = new ArrayList<>();
+            for (int i = 0; i < n; i++) {
+                String str = "";
+                for (int j = 0; j < n; j++) {
 
-	private static boolean isPossible(int n, int row, int col) {
-		//check in the same above column
-		for(int i=row-1;i>=0;i--) {
-			if(board[i][col]==1)return false;
-			
-		}
-		
-		//check in the above left diagonal
-		for(int i=row-1,j=col-1;i>=0&&j>=0;i--,j--) {
-			if(board[i][j]==1)return false;
-		}
-		//check in the above right diagonal
-		
-		for(int i=row-1,j=col+1;i>=0&&j<n;i--,j++) {
-			if(board[i][j]==1)return false;
-		}
-		
-		
-		//If  all the constraints satisfied return true so that we can insert one at that cell
-		return true;
-	}
+                    if (cols.get(i) == j) {
+                        str += "Q";
+                    } else {
+                        str += ".";
+                    }
 
+                }
+                temp.add(str);
+
+            }
+            res.add(temp);
+
+        }
+        for (int i = 0; i < n; i++) {
+            cols.add(i);
+            if (isValid(cols)) {
+                backtrack(n, res, row + 1, cols);
+            }
+            cols.remove(cols.size() - 1);
+        }
+
+
+    }
+
+    private boolean isValid(ArrayList<Integer> cols) {
+        int currentRow = cols.size() - 1;
+        int currentCol = cols.get(currentRow);
+        for (int i = 0; i < currentRow; i++) {
+            int prevCol = cols.get(i);
+            int diff = Math.abs(prevCol - currentCol);
+			/**
+			 * diff==0 -->indicates if they are on the same column
+			 *
+			 * diff==currentRow-i -->indicates if they are diagonal
+			 */
+			if (diff == 0 || diff == currentRow - i) return false;
+        }
+        return true;
+    }
 }
