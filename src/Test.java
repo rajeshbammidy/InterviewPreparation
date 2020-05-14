@@ -20,55 +20,97 @@ import static BinarySearch.IsPerfectSquare.isPerfectSquare;
  * Created by RajeshAatrayan|InterviewPreparation|PACKAGE_NAME|null.java| on Oct,2019
  * Happy Coding :)
  */
-public class Test {
 
-    public String removeKdigits(String num, int k) {
-        Stack<Integer> stack = new Stack<>();
-        int i = 0;
-        while (i < num.length() && k > 0) {
+class Trie {
 
-            if (stack.isEmpty()) {
-                stack.push(Integer.parseInt(num.charAt(i++) + ""));
-                continue;
-            }
-
-            if (stack.peek() > Integer.parseInt(num.charAt(i) + "")) {
-
-                while (k > 0 && !stack.isEmpty() && stack.peek() > Integer.parseInt(num.charAt(i) + "")) {
-                    k--;
-                    stack.pop();
-                }
-                stack.push(Integer.parseInt(num.charAt(i++) + ""));
-
-            } else {
-                stack.push(Integer.parseInt(num.charAt(i++) + ""));
-            }
-
-        }
-        while (k>0){
-            stack.pop();
-            k--;
-        }
-
-        String str = "";
-
-        while (!stack.isEmpty()) {
-            str = stack.pop() + str;
-        }
-
-        while (!str.isEmpty() && str.charAt(0) == '0') {
-            if (str.length() > 1)
-                str = str.substring(1);
-            else str = "";
-        }
-
-        while (i < num.length()) str += num.charAt(i++);
-        if (str.isEmpty()) return "0";
-        return str;
+    static class Node {
+        HashMap<Character, Node> map = new HashMap<Character, Node>();
+        boolean isEnd;
 
     }
 
+    /**
+     * Initialize your data structure here.
+     */
+    Node root;
+
+    public Trie() {
+        root = new Node();
+    }
+
+    /**
+     * Inserts a word into the trie.
+     */
+    public void insert(String word) {
+        Node node = root;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if (node.map.get(ch) == null) {
+                Node newnode = new Node();
+                node.map.put(ch, newnode);
+            }
+            node = node.map.get(ch);
+        }
+        node.isEnd = true;
+
+    }
+
+    /**
+     * Returns if the word is in the trie.
+     */
+    public boolean search(String word) {
+        Node node = root;
+
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if (node.map.get(ch) == null) return false;
+            node = node.map.get(ch);
+
+        }
+        return node.isEnd;
+
+    }
+
+    /**
+     * Returns if there is any word in the trie that starts with the given prefix.
+     */
+    public boolean startsWith(String word) {
+        Node node = root;
+
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if (node.map.get(ch) == null) return false;
+            node = node.map.get(ch);
+
+        }
+        return true;
+
+    }
+}
+
+public class Test {
+
+    public List<String> letterCombinations(String inp) {
+        List<String> res = new ArrayList<>();
+        if (inp.equals("")) return res;
+        String str[] = {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+
+        backtrackForStrings(res, 0, inp, "", str);
+        return res;
+    }
+
+    private void backtrackForStrings(List<String> res, int i, String dig, String aux, String[] inp) {
+        if (i == dig.length()) {
+            res.add(aux);
+            return;
+        }
+        String sample = inp[Integer.parseInt(dig.charAt(i) + "")];
+        for (int j = 0; j < sample.length(); j++) {
+            backtrackForStrings(res, i + 1, dig, aux + sample.charAt(j), inp);
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println(new Test().removeKdigits("65899", 2));
+        System.out.println(new Test().letterCombinations("0"));
     }
 }
