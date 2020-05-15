@@ -21,96 +21,44 @@ import static BinarySearch.IsPerfectSquare.isPerfectSquare;
  * Happy Coding :)
  */
 
-class Trie {
-
-    static class Node {
-        HashMap<Character, Node> map = new HashMap<Character, Node>();
-        boolean isEnd;
-
-    }
-
-    /**
-     * Initialize your data structure here.
-     */
-    Node root;
-
-    public Trie() {
-        root = new Node();
-    }
-
-    /**
-     * Inserts a word into the trie.
-     */
-    public void insert(String word) {
-        Node node = root;
-        for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
-            if (node.map.get(ch) == null) {
-                Node newnode = new Node();
-                node.map.put(ch, newnode);
-            }
-            node = node.map.get(ch);
-        }
-        node.isEnd = true;
-
-    }
-
-    /**
-     * Returns if the word is in the trie.
-     */
-    public boolean search(String word) {
-        Node node = root;
-
-        for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
-            if (node.map.get(ch) == null) return false;
-            node = node.map.get(ch);
-
-        }
-        return node.isEnd;
-
-    }
-
-    /**
-     * Returns if there is any word in the trie that starts with the given prefix.
-     */
-    public boolean startsWith(String word) {
-        Node node = root;
-
-        for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
-            if (node.map.get(ch) == null) return false;
-            node = node.map.get(ch);
-
-        }
-        return true;
-
-    }
-}
 
 public class Test {
+    int kadanesAlgo(int arr[]) {
+        int n = arr.length;
+        int maxSum = Integer.MIN_VALUE;
+        int curSum = 0;
 
-    public List<String> letterCombinations(String inp) {
-        List<String> res = new ArrayList<>();
-        if (inp.equals("")) return res;
-        String str[] = {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        for (int i = 0; i < n; i++) {
 
-        backtrackForStrings(res, 0, inp, "", str);
-        return res;
+            curSum += arr[i];
+            maxSum = Math.max(curSum, maxSum);
+            if (curSum < 0) curSum = 0;
+        }
+        return maxSum;
     }
 
-    private void backtrackForStrings(List<String> res, int i, String dig, String aux, String[] inp) {
-        if (i == dig.length()) {
-            res.add(aux);
-            return;
+    public int maxSubarraySumCircular(int[] arr) {
+
+        int maxSubArraySum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = -arr[i];
         }
-        String sample = inp[Integer.parseInt(dig.charAt(i) + "")];
-        for (int j = 0; j < sample.length(); j++) {
-            backtrackForStrings(res, i + 1, dig, aux + sample.charAt(j), inp);
+        maxSubArraySum = kadanesAlgo(arr);
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = -arr[i];
+            sum += arr[i];
         }
+        int actualKadanesSum = kadanesAlgo(arr);
+        System.out.println(actualKadanesSum);
+
+        return Math.max(actualKadanesSum, sum + maxSubArraySum==0?Integer.MIN_VALUE: sum + maxSubArraySum);
+
     }
 
     public static void main(String[] args) {
-        System.out.println(new Test().letterCombinations("0"));
+        System.out.println(new Test().maxSubarraySumCircular(new int[]{-2,-3,-1}));
+
+
     }
 }
