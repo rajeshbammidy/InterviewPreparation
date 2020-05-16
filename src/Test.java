@@ -22,43 +22,84 @@ import static BinarySearch.IsPerfectSquare.isPerfectSquare;
  */
 
 
-public class Test {
-    int kadanesAlgo(int arr[]) {
-        int n = arr.length;
-        int maxSum = Integer.MIN_VALUE;
-        int curSum = 0;
+class ListNode {
+    int val;
+    ListNode next;
 
-        for (int i = 0; i < n; i++) {
-
-            curSum += arr[i];
-            maxSum = Math.max(curSum, maxSum);
-            if (curSum < 0) curSum = 0;
-        }
-        return maxSum;
+    ListNode() {
     }
 
-    public int maxSubarraySumCircular(int[] arr) {
+    ListNode(int val) {
+        this.val = val;
+    }
 
-        int maxSubArraySum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = -arr[i];
-        }
-        maxSubArraySum = kadanesAlgo(arr);
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = -arr[i];
-            sum += arr[i];
-        }
-        int actualKadanesSum = kadanesAlgo(arr);
-        System.out.println(actualKadanesSum);
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+}
 
-        return Math.max(actualKadanesSum, sum + maxSubArraySum==0?Integer.MIN_VALUE: sum + maxSubArraySum);
+public class Test {
+
+    public ListNode oddEvenList(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode evenHead = null;
+        ListNode evenptr = null;
+        ListNode oddHead = null;
+        ListNode oddptr = null;
+        int c = 1;
+        while (head != null) {
+            if (c % 2 == 0) {
+                if (evenHead == null) {
+                    evenHead = head;
+                    evenptr = head;
+                    head = head.next;
+                    c++;
+                    continue;
+                }
+                evenptr.next = head;
+                evenptr = evenptr.next;
+
+
+            } else {
+
+                if (oddHead == null) {
+                    oddHead = head;
+                    oddptr = head;
+                    head = head.next;
+                    c++;
+                    continue;
+                }
+                oddptr.next = head;
+                oddptr = oddptr.next;
+
+
+            }
+            head = head.next;
+            c++;
+        }
+        evenptr.next=null;
+        if (evenHead != null) {
+            oddptr.next = evenHead;
+        }
+        return oddHead;
+
 
     }
 
     public static void main(String[] args) {
-        System.out.println(new Test().maxSubarraySumCircular(new int[]{-2,-3,-1}));
+        ListNode node = new ListNode(1, null);
+        ListNode ptr = node;
+        for (int i = 2; i <= 3; i++) {
+            ptr.next = new ListNode(i, null);
+            ptr = ptr.next;
+        }
 
+        ptr = new Test().oddEvenList(node);
+        while (ptr != null) {
+            System.out.println(ptr.val);
+            ptr = ptr.next;
+        }
 
     }
 }
