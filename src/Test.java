@@ -25,10 +25,11 @@ import static BinarySearch.IsPerfectSquare.isPerfectSquare;
 public class Test {
 
 
-
-
     public static void main(String[] args) {
-
-
+        Deque<Integer> deque = new LinkedList<>();
+        deque.add(1);
+        deque.add(2);
+        System.out.println(deque.peek());
+        System.out.println(deque.pop());
     }
 }
