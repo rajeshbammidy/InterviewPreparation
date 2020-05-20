@@ -12,6 +12,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.math.BigInteger;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import static BinarySearch.IsPerfectSquare.isPerfectSquare;
@@ -26,10 +28,7 @@ public class Test {
 
 
     public static void main(String[] args) {
-        Deque<Integer> deque = new LinkedList<>();
-        deque.add(1);
-        deque.add(2);
-        System.out.println(deque.peek());
-        System.out.println(deque.pop());
+        BigInteger val=new BigInteger("924804040252525252");
+        System.out.println(BigInteger.valueOf(0).isProbablePrime(1));
     }
 }
