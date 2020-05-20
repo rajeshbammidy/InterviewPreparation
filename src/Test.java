@@ -23,12 +23,51 @@ import static BinarySearch.IsPerfectSquare.isPerfectSquare;
  * Happy Coding :)
  */
 
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 
 public class Test {
+    static int kth = 0;
+    static int ans = 0;
 
+    public int kthSmallest(TreeNode root, int k) {
+        ans = 0;
+        kth = 0;
+        preOrder(root, k);
+        return ans;
+
+    }
+
+    private void preOrder(TreeNode root, int k) {
+        if (root != null) {
+            preOrder(root.left, k);
+            kth += 1;
+            if (kth == k) ans = root.val;
+            preOrder(root.right, k);
+
+        }
+
+    }
 
     public static void main(String[] args) {
-        BigInteger val=new BigInteger("924804040252525252");
-        System.out.println(BigInteger.valueOf(0).isProbablePrime(1));
+
+
     }
 }
