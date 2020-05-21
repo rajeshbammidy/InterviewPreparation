@@ -1,30 +1,54 @@
+package DynamicProgramming;
 
-
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.org.apache.regexp.internal.RE;
-import netscape.security.UserTarget;
-import org.omg.CORBA.INTERNAL;
-import org.omg.CORBA.MARSHAL;
-
-
-import javax.print.attribute.HashAttributeSet;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-
-import static BinarySearch.IsPerfectSquare.isPerfectSquare;
+import java.util.Collections;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
- * Created by RajeshAatrayan|InterviewPreparation|PACKAGE_NAME|null.java| on Oct,2019
+ * Created by RajeshAatrayan|InterviewPreparation|DynamicProgramming|CountSquareSubmatriceswithAllOnes| on May,2020
+ *  
  * Happy Coding :)
- */
-
-
-public class Test {
+ *
+ * Given a m * n matrix of ones and zeros, return how many square submatrices have all ones.
+ *
+ *
+ *
+ * Example 1:
+ *
+ * Input: matrix =
+ * [
+ *   [0,1,1,1],
+ *   [1,1,1,1],
+ *   [0,1,1,1]
+ * ]
+ * Output: 15
+ * Explanation:
+ * There are 10 squares of side 1.
+ * There are 4 squares of side 2.
+ * There is  1 square of side 3.
+ * Total number of squares = 10 + 4 + 1 = 15.
+ * Example 2:
+ *
+ * Input: matrix =
+ * [
+ *   [1,0,1],
+ *   [1,1,0],
+ *   [1,1,0]
+ * ]
+ * Output: 7
+ * Explanation:
+ * There are 6 squares of side 1.
+ * There is 1 square of side 2.
+ * Total number of squares = 6 + 1 = 7.
+ *
+ *
+ * Constraints:
+ *
+ * 1 <= arr.length <= 300
+ * 1 <= arr[0].length <= 300
+ * 0 <= arr[i][j] <= 1
+ **/
+public class CountSquareSubmatriceswithAllOnes {
     public int countSquares(int[][] matrix) {
         if (matrix.length == 0) return 0;
         int dp[][] = new int[matrix.length + 1][matrix[0].length + 1];
@@ -59,12 +83,5 @@ public class Test {
         return sum;
 
 
-    }
-
-    public static void main(String[] args) {
-
-        int a=6;
-        int b=3;
-        System.out.println(BigInteger.valueOf(a).isProbablePrime(1));
     }
 }
