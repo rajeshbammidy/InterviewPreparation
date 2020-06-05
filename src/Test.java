@@ -28,42 +28,19 @@ import static BinarySearch.IsPerfectSquare.isPerfectSquare;
 
 
 public class Test {
-    static class node {
-        int x;
-        int y;
-        int z;
+    public void reverseString(char[] str) {
+      for(int i=0;i<str.length/2;i++){
+          char c=str[i];
+          char d=   str[str.length-i-1];
+          str[str.length-i-1]=c;
+          str[i]=d;
 
-        public node(int x, int y, int z) {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-        }
-    }
+      }
 
-    public int twoCitySchedCost(int[][] costs) {
-        ArrayList<node> list = new ArrayList<>();
 
-        for (int i = 0; i < costs.length; i++) {
-            list.add(new node(costs[i][0], costs[i][1], costs[i][1] - costs[i][0]));
-        }
-        list.sort(new Comparator<node>() {
-            @Override
-            public int compare(node o1, node o2) {
-                return -(o1.z - o2.z);
-            }
-        });
-        int n = costs.length;
-        int ans = 0;
-        for (int i = 0; i < n / 2; i++) {
-            ans += list.get(i).x;
-        }
-        for (int i = n / 2; i < n; i++) {
-            ans += list.get(i).y;
-        }
-        return ans;
     }
 
     public static void main(String[] args) {
-        Collections.max(new ArrayList<Integer>());
+        new Test().reverseString(new char[]{'a','b','c'});
     }
 }
