@@ -1,46 +1,66 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+class InvalidInputException extends Exception {
+
+}
+
+class Employee {
+
+    private int id = 0;
+    private String name = null;
+    private boolean male = true;
+
+    Employee(int id, String name, boolean male) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.male = male;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [id=" + id + ", name=" + name + ",  male=" + male + "]";
+    }
+
+    @Override
+    public int hashCode() {
+        // Complete all relevent code
+        return this.id;
+    }
 
 
-
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.org.apache.regexp.internal.RE;
-import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
-import netscape.security.UserTarget;
-import org.omg.CORBA.INTERNAL;
-import org.omg.CORBA.MARSHAL;
-import sun.rmi.runtime.Log;
-
-
-import javax.print.attribute.HashAttributeSet;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-
-import static BinarySearch.IsPerfectSquare.isPerfectSquare;
-
-/**
- * Created by RajeshAatrayan|InterviewPreparation|PACKAGE_NAME|null.java| on Oct,2019
- * Happy Coding :)
- */
-
+}
 
 public class Test {
-    public void reverseString(char[] str) {
-      for(int i=0;i<str.length/2;i++){
-          char c=str[i];
-          char d=   str[str.length-i-1];
-          str[str.length-i-1]=c;
-          str[i]=d;
 
-      }
+    public int singleNumber(int[] nums) {
+        int ans = 0;
+        for (int i = 0; i < 32; i++) {
 
+            int mask = (1 << i);
+            int numZeroes = 0;
+            int numOnes = 0;
+            for (int j = 0; j < nums.length; j++) {
+
+                if ((nums[j] & mask) == 0) {
+                    numZeroes++;
+                } else {
+                    numOnes++;
+                }
+
+            }
+            if (numOnes % 3 != 0) {
+                ans = (ans | mask);
+            }
+
+        }
+        return ans;
 
     }
 
-    public static void main(String[] args) {
-        new Test().reverseString(new char[]{'a','b','c'});
+    public static void main(String[] str) {
+        System.out.println(new Test().singleNumber(new int[]{0,1,0,1,0,1,99}));
     }
+
 }
