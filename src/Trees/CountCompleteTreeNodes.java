@@ -33,7 +33,7 @@ public class CountCompleteTreeNodes {
 
     int rightCount(TreeNode root) {
         if (root != null) {
-            return 1 + leftCount(root.right);
+            return 1 + rightCount(root.right);
         }
         return 0;
     }
