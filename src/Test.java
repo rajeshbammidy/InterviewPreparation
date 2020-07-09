@@ -1,70 +1,69 @@
 import java.util.*;
 
-class InvalidInputException extends Exception {
-
-}
-
 
 public class Test {
-    static boolean dp[][];
+    int ans = Integer.MAX_VALUE;
 
-    static boolean isPosSubSetSum(int arr[], int sum) {
-        dp = new boolean[arr.length + 1][sum + 1];
-        int m = dp.length;
-        int n = dp[0].length;
-        for (int i = 0; i < m; i++) dp[i][0] = true;
-        for (int i = 1; i < m; i++) {
-            for (int j = 1; j < n; j++) {
-
-                if (arr[i - 1] > j) dp[i][j] = dp[i - 1][j];
-                else {
-                    dp[i][j] = dp[i - 1][j] || dp[i - 1][j - arr[i - 1]];
-                }
-
-            }
-        }
-        //   System.out.println(Arrays.deepToString(dp));
-        return dp[m - 1][n - 1];
+    void soln(int arr[][], int d, int p) {
+        boolean visited[] = new boolean[arr[0].length];
+        int numVisited = 0;
+        backtrack(arr, visited, numVisited, p, 0, 0);
+        System.out.println(ans);
     }
 
+    private void backtrack(int[][] arr, boolean[] visited, int numVisited, int p, int s, int sum) {
+        if(s<0 || s>=arr[0].length)return;
 
-    public boolean splitArraySameAverage(int[] arr) {
-        int sum = 0;
-        int n = arr.length;
-        for (int x : arr) sum += x;
-        boolean feasible = false;
-        for (int i = 1; i <= arr.length; i++) {
-            if ((i * sum) % n == 0) feasible = true;
+        if (numVisited == p) {
+            ans = Math.min(ans, sum);
+            System.out.println(Arrays.toString(visited) + " "+ans);
         }
-        if (!feasible) return false;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int max = -1;
-        for (int i = 1; i <= arr.length / 2; i++) {
-            map.put((i * sum) / n, i);
-            max =(i * sum) / n;
-        }
-        if(max==-1)return false;
 
+        for (int i = s; i < arr[0].length; i++) {
+            numVisited++;
+            sum += arr[0][i];
+            visited[i] = true;
 
-        int dp[][] = new int[arr.length + 1][max + 1];
-        for (int i = 1; i <= arr.length; i++) {
-            for (int j = 1; j < dp[0].length; j++) {
-                dp[i][j] = dp[i - 1][j];
-                if (arr[i - 1] == j || (j > arr[i - 1] && dp[i - 1][j - arr[i - 1]] > 0)) {
-                    dp[i][j] = dp[i - 1][j - arr[i - 1]] + 1;
-                    if (map.containsKey(j) && map.get(j) == dp[i][j]) return true;
+            for (int j = 0; j < arr.length; j++) {
+                if (valid(i + 1, arr) && !visited[i + 1]) {
+                    sum += arr[j][i + 1];
+                    visited[i + 1] = true;
+                    numVisited++;
+                    backtrack(arr, visited, numVisited, p, i+2, sum);
+                    sum -= arr[j][i + 1];
+                    visited[i + 1] = false;
+                    numVisited--;
                 }
-
-
             }
+
+            for (int j = 0; j < arr.length; j++) {
+                if (valid(i - 1, arr) && !visited[i - 1]) {
+                    sum += arr[j][i - 1];
+                    visited[i - 1] = true;
+                    numVisited++;
+                    backtrack(arr, visited, numVisited, p, i-2, sum);
+                    sum -= arr[j][i - 1];
+                    visited[i - 1] = false;
+                    numVisited--;
+                }
+            }
+
+            numVisited--;
+            sum -= arr[0][i];
+            visited[i] = false;
+
+
         }
 
-        return false;
+
     }
 
+    private boolean valid(int i, int[][] arr) {
+        return i >= 0 && i < arr.length;
+    }
 
     public static void main(String[] str) {
-        System.out.println(new Test().splitArraySameAverage(new int[]{6,8,18,3,1}));
+      new Test().soln(new int[][]{{1,2,1,0},{2,3,0,1},{3,1,4,2}},3,4);
 
     }
 
