@@ -8,9 +8,31 @@ import java.util.*;
 
 public class Test {
 
+    public boolean isPalindrome(String s) {
+        if (s.isEmpty() || s.length() == 0) return true;
+        String res = "";
+        for (int i = 0; i < s.length(); i++) {
+            int ch = s.charAt(i);
+            if (ch >= 65 && ch <= 90 || ch >= 97 && ch <= 122 || ch>=48 && ch<=57) res = res + s.charAt(i);
+
+
+        }
+
+        int i = 0;
+        int j = res.length() - 1;
+        while (i < j) {
+            char beg = res.charAt(i);
+            char end = res.charAt(j);
+            if (Character.toLowerCase(beg) != Character.toLowerCase(end)) return false;
+            i++;
+            j--;
+        }
+        return true;
+
+    }
 
     public static void main(String[] str) throws Exception {
-
+        System.out.println((int) '9');
 
     }
 
