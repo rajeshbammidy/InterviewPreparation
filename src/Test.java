@@ -1,70 +1,75 @@
+import org.omg.CORBA.INTERNAL;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.sql.Struct;
 import java.util.*;
 
 
 public class Test {
-    int ans = Integer.MAX_VALUE;
 
-    void soln(int arr[][], int d, int p) {
-        boolean visited[] = new boolean[arr[0].length];
-        int numVisited = 0;
-        backtrack(arr, visited, numVisited, p, 0, 0);
-        System.out.println(ans);
+
+    public static void main(String[] str) throws Exception {
+
+
     }
 
-    private void backtrack(int[][] arr, boolean[] visited, int numVisited, int p, int s, int sum) {
-        if(s<0 || s>=arr[0].length)return;
+    int findIndex(int arr[]) {
 
-        if (numVisited == p) {
-            ans = Math.min(ans, sum);
-            System.out.println(Arrays.toString(visited) + " "+ans);
-        }
+        int l = arr.length - 1;
 
-        for (int i = s; i < arr[0].length; i++) {
-            numVisited++;
-            sum += arr[0][i];
-            visited[i] = true;
+        int beg = 0, end = l;
 
-            for (int j = 0; j < arr.length; j++) {
-                if (valid(i + 1, arr) && !visited[i + 1]) {
-                    sum += arr[j][i + 1];
-                    visited[i + 1] = true;
-                    numVisited++;
-                    backtrack(arr, visited, numVisited, p, i+2, sum);
-                    sum -= arr[j][i + 1];
-                    visited[i + 1] = false;
-                    numVisited--;
-                }
-            }
+        while (beg <= end) {
 
-            for (int j = 0; j < arr.length; j++) {
-                if (valid(i - 1, arr) && !visited[i - 1]) {
-                    sum += arr[j][i - 1];
-                    visited[i - 1] = true;
-                    numVisited++;
-                    backtrack(arr, visited, numVisited, p, i-2, sum);
-                    sum -= arr[j][i - 1];
-                    visited[i - 1] = false;
-                    numVisited--;
-                }
-            }
+            int mid = beg + (end - beg) / 2;
 
-            numVisited--;
-            sum -= arr[0][i];
-            visited[i] = false;
+            if (mid - 1 != 0 && arr[mid - 1] < arr[mid] && mid + 1 != arr.length && arr[mid + 1] < arr[mid]) return mid;
 
+            else if (arr[mid] > arr[l]) beg = mid + 1;
+
+            else end = mid - 1;
 
         }
 
+        return 0;
 
     }
 
-    private boolean valid(int i, int[][] arr) {
-        return i >= 0 && i < arr.length;
+    public static int msolution(int N, int K) {
+        int result = 0;
+        while (N >= 3 && K > 0) {
+            if (N % 2 == 0) {
+                N -= 1;
+            } else {
+                N /= 2;
+                K -= 1;
+            }
+            result += 1;
+        }
+        return result + N - 1;
     }
 
-    public static void main(String[] str) {
-      new Test().soln(new int[][]{{1,2,1,0},{2,3,0,1},{3,1,4,2}},3,4);
+    public static String solution(String message, int k) {
+        String arr[] = message.split("\\s");
+        int curlen = 0;
+        String curString = "";
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].length() + curlen > k) return curString;
+            if (curString.isEmpty()) {
+                curString = arr[i];
+                curlen = curString.length();
+            } else {
 
+                if (arr[i].length() + 1 + curlen > k) return curString;
+                curString = curString + " " + arr[i];
+                curlen = curString.length();
+
+            }
+        }
+
+        return curString;
     }
+
 
 }
