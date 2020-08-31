@@ -1,97 +1,70 @@
-import org.omg.CORBA.INTERNAL;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.sql.Struct;
 import java.util.*;
 
 
 public class Test {
+    int ans = Integer.MIN_VALUE;
 
-    public boolean isPalindrome(String s) {
-        if (s.isEmpty() || s.length() == 0) return true;
-        String res = "";
-        for (int i = 0; i < s.length(); i++) {
-            int ch = s.charAt(i);
-            if (ch >= 65 && ch <= 90 || ch >= 97 && ch <= 122 || ch>=48 && ch<=57) res = res + s.charAt(i);
+    public int largestComponentSize(int[] arr) {
+        boolean visited[] = new boolean[arr.length];
 
+        bactrack(arr, visited, new Stack<Integer>());
+        return ans;
 
+    }
+
+    private void bactrack(int[] arr, boolean[] visited, Stack<Integer> stack) {
+        ans = Math.max(ans, stack.size());
+
+        for (int i = 0; i < arr.length; i++) {
+            if (!visited[i]) {
+                if (stack.isEmpty()) {
+                    visited[i] = true;
+                    stack.push(arr[i]);
+                    bactrack(arr, visited, stack);
+                    stack.pop();
+                    visited[i] = false;
+                } else {
+                    int a = stack.peek();
+                    int gcd = findGCD(a, arr[i]);
+                    if (gcd > 1) {
+                        stack.push(arr[i]);
+                        visited[i] = true;
+                        bactrack(arr, visited, stack);
+                        stack.pop();
+                        visited[i] = false;
+
+                    }
+                }
+            }
         }
 
-        int i = 0;
-        int j = res.length() - 1;
+
+    }
+
+    private int findGCD(int a, int b) {
+        if (b == 0) return a;
+        return findGCD(b, a % b);
+    }
+
+    private void flipList(int i, int j, ArrayList<Integer> olist) {
         while (i < j) {
-            char beg = res.charAt(i);
-            char end = res.charAt(j);
-            if (Character.toLowerCase(beg) != Character.toLowerCase(end)) return false;
+            int temp = olist.get(i);
+            olist.set(i, olist.get(j));
+            olist.set(j, temp);
             i++;
             j--;
-        }
-        return true;
-
-    }
-
-    public static void main(String[] str) throws Exception {
-        System.out.println((int) '9');
-
-    }
-
-    int findIndex(int arr[]) {
-
-        int l = arr.length - 1;
-
-        int beg = 0, end = l;
-
-        while (beg <= end) {
-
-            int mid = beg + (end - beg) / 2;
-
-            if (mid - 1 != 0 && arr[mid - 1] < arr[mid] && mid + 1 != arr.length && arr[mid + 1] < arr[mid]) return mid;
-
-            else if (arr[mid] > arr[l]) beg = mid + 1;
-
-            else end = mid - 1;
 
         }
-
-        return 0;
-
     }
 
-    public static int msolution(int N, int K) {
-        int result = 0;
-        while (N >= 3 && K > 0) {
-            if (N % 2 == 0) {
-                N -= 1;
-            } else {
-                N /= 2;
-                K -= 1;
-            }
-            result += 1;
-        }
-        return result + N - 1;
+    public static void main(String[] args) {
+
+/**
+ *
+ * Example call
+ *lordOfRing(new int[]{5,10,-5});
+ */
     }
-
-    public static String solution(String message, int k) {
-        String arr[] = message.split("\\s");
-        int curlen = 0;
-        String curString = "";
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].length() + curlen > k) return curString;
-            if (curString.isEmpty()) {
-                curString = arr[i];
-                curlen = curString.length();
-            } else {
-
-                if (arr[i].length() + 1 + curlen > k) return curString;
-                curString = curString + " " + arr[i];
-                curlen = curString.length();
-
-            }
-        }
-
-        return curString;
-    }
-
 
 }
