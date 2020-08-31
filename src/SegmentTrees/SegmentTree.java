@@ -5,7 +5,7 @@ package SegmentTrees;
  *  
  * Happy Coding :)
  **/
-public class ConstructSGT {
+public class SegmentTree {
     static int tree[];
 
     public static void main(String[] args) {
