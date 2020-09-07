@@ -3,68 +3,69 @@ import java.util.*;
 
 
 public class Test {
-    int ans = Integer.MIN_VALUE;
+    int dp[][];
+    boolean[][] result;
 
-    public int largestComponentSize(int[] arr) {
-        boolean visited[] = new boolean[arr.length];
-
-        bactrack(arr, visited, new Stack<Integer>());
-        return ans;
-
-    }
-
-    private void bactrack(int[] arr, boolean[] visited, Stack<Integer> stack) {
-        ans = Math.max(ans, stack.size());
-
-        for (int i = 0; i < arr.length; i++) {
-            if (!visited[i]) {
-                if (stack.isEmpty()) {
-                    visited[i] = true;
-                    stack.push(arr[i]);
-                    bactrack(arr, visited, stack);
-                    stack.pop();
-                    visited[i] = false;
-                } else {
-                    int a = stack.peek();
-                    int gcd = findGCD(a, arr[i]);
-                    if (gcd > 1) {
-                        stack.push(arr[i]);
-                        visited[i] = true;
-                        bactrack(arr, visited, stack);
-                        stack.pop();
-                        visited[i] = false;
-
-                    }
+    public int minCut(String s) {
+        if (s.length() == 0) return 0;
+        int n = s.length();
+        dp = new int[s.length() + 1][s.length() + 1];
+        for (int i = 0; i < s.length(); i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        result = new boolean[n][n];
+        for (int i = 0; i < result.length; i++) {
+            result[i][i] = true;
+        }
+        for (int i = 0; i < result.length - 1; i++) {
+            if (s.charAt(i) == s.charAt(i + 1)) {
+                result[i][i + 1] = true;
+            }
+        }
+        for (int length = 3; length <= n; length++) {
+            for (int i = 0; i < n - length + 1; i++) {
+                int j = i + length - 1;
+                if (s.charAt(i) == s.charAt(j) && result[i + 1][j - 1]) {
+                    result[i][j] = true;
                 }
             }
         }
 
+        return backtrack(s, 0, s.length() - 1);
 
     }
 
-    private int findGCD(int a, int b) {
-        if (b == 0) return a;
-        return findGCD(b, a % b);
-    }
+    private int backtrack(String s, int i, int j) {
+        if (i >= j) return 0;
 
-    private void flipList(int i, int j, ArrayList<Integer> olist) {
-        while (i < j) {
-            int temp = olist.get(i);
-            olist.set(i, olist.get(j));
-            olist.set(j, temp);
-            i++;
-            j--;
+        if (dp[i][j] != -1) return dp[i][j];
 
+        if (result[i][j]) return 0;
+
+
+        int min = Integer.MAX_VALUE;
+        for (int k = i; k < j; k++) {
+            int lp = 0, rp = 0;
+            if (dp[i][k] != -1) {
+                lp = dp[i][k];
+            } else {
+                lp = backtrack(s, i, k);
+            }
+            if (dp[k + 1][j] != -1) {
+                rp = dp[k + 1][j];
+            } else {
+                rp = backtrack(s, k + 1, j);
+            }
+            int ans = lp + rp + 1;
+            min = Math.min(min, ans);
         }
+        dp[i][j] = min;
+        return min;
     }
+
 
     public static void main(String[] args) {
-
-/**
- *
- * Example call
- *lordOfRing(new int[]{5,10,-5});
- */
+        System.out.println(new Test().minCut("coder"));
     }
 
 }
