@@ -1,5 +1,8 @@
 package Trees;
 
+import java.util.ArrayList;
+import java.util.Stack;
+
 /**
  * Created by RajeshAatrayan|InterviewPreparation|Trees|TreeFromPreorder| on Apr,2020
  *  
@@ -23,48 +26,25 @@ package Trees;
  * The values of preorder are distinct.
  **/
 public class TreeFromPreorder {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-    static int index = 0;
 
 
-    public TreeNode bstFromPreorder(int[] preorder) {
-        if (preorder.length == 0) return null;
-        if (preorder.length == 1) return new TreeNode(preorder[0]);
+    public int solve(ArrayList<Integer> list) {
+        Stack<Integer> stack = new Stack<>();
 
-        return buildTree(preorder, Integer.MIN_VALUE, Integer.MAX_VALUE, preorder.length);
+        int root = Integer.MIN_VALUE;
+        for (int i = 0; i < list.size(); i++) {
 
-    }
+            if (root > list.get(i)) return 0;
 
-    private TreeNode buildTree(int[] preorder, int minValue, int maxValue, int size) {
-
-
-        if (index >= size) {
-            return null;
-        }
-        TreeNode root = null;
-        int key = preorder[index];
-        if (key > minValue && key < maxValue) {
-            root = new TreeNode(key);
-            index += 1;
-            if (index < size) {
-                root.left = buildTree(preorder, minValue, key, size);
-                root.right = buildTree(preorder, key, maxValue, size);
+            while (!stack.isEmpty() && stack.peek() < list.get(i)) {
+                root = stack.pop();
             }
-
+            stack.push(list.get(i));
         }
-        return root;
+        return 1;
+
 
     }
-
 
 
 }
