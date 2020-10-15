@@ -1,14 +1,30 @@
-package Trees;
-
-import java.util.*;
+package Oct_LeetCode;
 
 /**
- * Created by RajeshAatrayan|InterviewPreparation|Trees|TestTree| on Sep,2020
+ * Created by RajeshAatrayan|InterviewPreparation|Oct_LeetCode|InsertintoaBinarySearchTree| on Oct,2020
  *  
  * Happy Coding :)
  **/
-public class TestTree {
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+public class InsertintoaBinarySearchTree {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) return new TreeNode(val);
         TreeNode cur = root;
@@ -32,14 +48,6 @@ public class TestTree {
         }
         return root;
 
-
-    }
-
-    public static void main(String[] args) {
-        ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(new Integer[]{5, 6, 7, 8, 9}));
-        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(new Integer[]{1, 11, 12, 13}));
-        ArrayList<Integer> list = new ArrayList<>();
-        System.out.println(list1.toString());
 
     }
 }
