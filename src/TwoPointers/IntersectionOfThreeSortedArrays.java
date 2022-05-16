@@ -1,4 +1,4 @@
-package Arrays;
+package TwoPointers;
 
 /**
  * Project: InterviewPreparation
@@ -8,7 +8,6 @@ package Arrays;
  * Happy Coding :)
  **/
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
