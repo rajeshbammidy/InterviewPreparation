@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Created by RajeshAatrayan|InterviewPreparation|Arrays|MinimumOperationsOfGivenTypeToMakeAllElementsOfAMatrixEqual| on Dec,2019
  * Happy Coding :)
  *
- *  Minimum operations of given type to make all elements of a matrix equal
+ * Minimum operations of given type to make all elements of a matrix equal
  * Given a matrix of integers A of size N x M and an integer B. In a single operation, B can be added to or subtracted from any element of the matrix. Find and return the minimum number of operations required to make all the elements of the matrix equal and if it impossible return -1 instead. Note: Rows are numbered from top to bottom and columns are numbered from left to right.
  * Input Format
  * The first argument given is the integer matrix A.
@@ -19,20 +19,19 @@ import java.util.Arrays;
  * 1 <= B <= 1000
  * For Example
  * Input 1:
- *     A = [   [0, 2, 8]
- *             [8, 2, 0]
- *             [0, 2, 8]   ]
- *     B = 2
+ * A = [   [0, 2, 8]
+ * [8, 2, 0]
+ * [0, 2, 8]   ]
+ * B = 2
  * Output 1:
- *     12
+ * 12
  *
  * Input 2:
- *     A = [   [5, 17, 100, 11]
- *             [0, 0,  2,   8]    ]
- *     B = 3
+ * A = [   [5, 17, 100, 11]
+ * [0, 0,  2,   8]    ]
+ * B = 3
  * Output 2:
- *     -1
- *
+ * -1
  */
 public class MinimumOperationsOfGivenTypeToMakeAllElementsOfAMatrixEqual {
     /**

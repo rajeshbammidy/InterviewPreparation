@@ -26,7 +26,6 @@ public class CutTheChocolate {
     public int solve(int a, int b) {
         if(a==1 && b==1)return 0;
         int tot=a*b-1;//these are the total vertical and horizontal cuts that we can make
-        if(b==1)tot=a-1;
         if(tot%2==0)return 0;
         return 1;
     }
