@@ -86,7 +86,7 @@ public class AllUniquePermutations {
 
         for (int i = 0; i < list.size(); i++) {
 
-            // if the element is already used dont included in the aux
+            // if the element is already used don't included in the aux
             // if the element is same as of the previous element then it should come along with previous element not alone
 
             if (used[i] || i > 0 && list.get(i) == list.get(i - 1) && !used[i - 1]) {
