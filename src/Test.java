@@ -35,6 +35,6 @@ public class Test {
 
 
     public static void main(String[] args) throws Exception {
-        System.out.println(new Test().rob(new int[]{1, 2, 3, 1}));
+
     }
 }
