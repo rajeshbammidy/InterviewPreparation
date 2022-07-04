@@ -1,6 +1,15 @@
 import java.io.*;
 import java.util.*;
 
+class No {
+    int x;
+    int y;
+
+    No(int x, int y) {
+        this.y = y;
+        this.x = x;
+    }
+}
 
 public class Test {
     public int maxp3(int[] arr) {
@@ -31,10 +40,32 @@ public class Test {
         return -1;
 
     }
+    public int maximumUnits(int[][] boxTypes, int truckSize) {
+        Arrays.sort(boxTypes, (a, b) -> {
+            return b[1] - a[1];
+        });
+        System.out.println(Arrays.deepToString(boxTypes));
+        int boxCount = 0,  maxUnits = 0;
 
+        for (int i = 0; i < boxTypes.length; i++) {
+            int boxes = boxTypes[i][0];
+            int units = boxTypes[i][1];
+            if (boxCount + boxes <= truckSize) {
+                boxCount += boxes;
+                maxUnits += boxes * units;
+            } else {
+                int r = truckSize - boxCount;
+                boxCount += r;
+                maxUnits += (r * units);
+            }
+            if (boxCount == truckSize) return maxUnits;
+        }
+        return maxUnits;
 
+    }
 
     public static void main(String[] args) throws Exception {
-
+       int arr[]= Arrays.copyOf(new int[]{1,2,3},4);
+        System.out.println(Arrays.toString(arr));
     }
 }
