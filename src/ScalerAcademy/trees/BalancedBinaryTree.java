@@ -32,17 +32,17 @@ package ScalerAcademy.trees;
  * Example Input
  * Input 1:
  *
- *     1
- *    / \
- *   2   3
+ * 1
+ * / \
+ * 2   3
  * Input 2:
  *
  *
- *        1
- *       /
- *      2
- *     /
- *    3
+ * 1
+ * /
+ * 2
+ * /
+ * 3
  *
  *
  * Example Output
@@ -76,6 +76,7 @@ public class BalancedBinaryTree {
             right = null;
         }
     }
+
 
     public int isBalanced(TreeNode root) {
         return isTreeBalanced(root) == -1 ? 0 : 1;

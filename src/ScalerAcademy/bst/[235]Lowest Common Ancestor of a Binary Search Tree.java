@@ -48,7 +48,7 @@ package ScalerAcademy.bst;//Given a binary search tree (BST), find the lowest co
 //leetcode submit region begin(Prohibit modification and deletion)
 
 class Solution1 {
-
+    static class TreeNode { int val; TreeNode left; TreeNode right; TreeNode() { } TreeNode(int val) { this.val = val; } TreeNode(int val, TreeNode left, TreeNode right) { this.val = val; this.left = left; this.right = right; } }
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
