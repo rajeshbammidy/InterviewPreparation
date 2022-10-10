@@ -1,4 +1,4 @@
-package LeetCode.Aug_LeetCode;
+package LeetCode.Aug21;
 
 /**
  * Created by RajeshAatrayan|InterviewPreparation|LeetCode.Aug_LeetCode|PowerofFour| on Aug,2020

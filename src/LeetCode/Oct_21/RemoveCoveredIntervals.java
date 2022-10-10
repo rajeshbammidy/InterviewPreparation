@@ -1,4 +1,4 @@
-package LeetCode.Oct_LeetCode;
+package LeetCode.Oct_21;
 
 import java.util.ArrayList;
 import java.util.Comparator;

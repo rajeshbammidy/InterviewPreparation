@@ -1,4 +1,4 @@
-package LeetCode.Sept_LeetCode;
+package LeetCode.Sept21;
 
 /**
  * Created by RajeshAatrayan|InterviewPreparation|LeetCode.Sept_LeetCode|LargestTimeforGivenDigits| on Sep,2020

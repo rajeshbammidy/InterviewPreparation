@@ -1,4 +1,4 @@
-package LeetCode.July22_LeetCode;//You are given a rectangular cake of size h x w and two arrays of integers
+package LeetCode.July22;//You are given a rectangular cake of size h x w and two arrays of integers
 //horizontalCuts and verticalCuts where: 
 //
 // 

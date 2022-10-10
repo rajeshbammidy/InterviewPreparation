@@ -1,4 +1,4 @@
-package LeetCode.Oct_LeetCode;
+package LeetCode.Oct_21;
 
 /**
  * Created by RajeshAatrayan|InterviewPreparation|LeetCode.Oct_LeetCode|KdiffPairsinanArray| on Oct,2020

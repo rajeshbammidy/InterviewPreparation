@@ -1,4 +1,4 @@
-package LeetCode.Aug_LeetCode;
+package LeetCode.Aug21;
 
 import java.util.HashMap;
 import java.util.Map;

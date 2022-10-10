@@ -1,4 +1,4 @@
-package LeetCode.July22_LeetCode;
+package LeetCode.July22;
 //You are assigned to put some amount of boxes onto one truck. You are given a 2
 //D array boxTypes, where boxTypes[i] = [numberOfBoxesi, numberOfUnitsPerBoxi]: 
 //
