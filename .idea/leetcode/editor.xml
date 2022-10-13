@@ -58,6 +58,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/LeetCode/Oct22/leetcode/editor/en/[237]Delete Node in a Linked List.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/LeetCode/Oct22/leetcode/editor/en/doc/content/[237]Delete Node in a Linked List.md" />
+              <option name="frontendQuestionId" value="leetcode.com237" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/LeetCode/Oct22/leetcode/editor/en/[237]Delete Node in a Linked List.java" />
+              <option name="titleSlug" value="delete-node-in-a-linked-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/LeetCode/Oct22/leetcode/editor/en/[976]Largest Perimeter Triangle.java">
           <value>
             <LeetcodeEditor>
