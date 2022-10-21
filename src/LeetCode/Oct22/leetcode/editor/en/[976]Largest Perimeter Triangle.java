@@ -31,7 +31,7 @@ package LeetCode.Oct22.leetcode.editor.en;//Given an integer array nums, return 
 import java.util.Arrays;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution976 {
     public int largestPerimeter(int[] nums) {
         if (nums.length < 3) return 0;
         Arrays.sort(nums);
