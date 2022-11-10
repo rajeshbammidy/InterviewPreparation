@@ -2,7 +2,7 @@ package kattis;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+
 
 public class mailbox {
     static int dp[][][];
@@ -43,5 +43,3 @@ public class mailbox {
         return min;
     }
 }
-
-

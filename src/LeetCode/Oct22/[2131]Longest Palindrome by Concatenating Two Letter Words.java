@@ -122,9 +122,5 @@ class Solution2131 {
         }
         return true;
     }
-
-   /* public static void main(String[] args) {
-        new Solution2131().longestPalindrome(new String[]{"lc", "cl", "gg"});
-    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -2,12 +2,13 @@ package kattis;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class grid {
+    /**
+     * Pair class to hold the i,j index of a square
+     */
     static class Pair {
         int i;
         int j;
@@ -21,15 +22,13 @@ public class grid {
     static int bfs(int grid[][]) {
         int m = grid.length;
         int n = grid[0].length;
-        HashSet<String> set = new HashSet<>();
+        /**
+         * visted array to store the visited indexes
+         */
+        int visted[][] = new int[m][n];
         Queue<Pair> queue = new LinkedList<>();
         queue.add(new Pair(0, 0));
-
-
-        //set.add(0 + "-" + 0);
-       /* //T,L,B,R
-        int dirX[] = {-1, 0, 1, 0};
-        int dirY[] = {0, -1, 0, 1};*/
+        visted[0][0] = -1;
         int count = 0;
         int distI = grid.length - 1;
         int distJ = grid[0].length - 1;
@@ -39,41 +38,39 @@ public class grid {
             while (qs-- > 0) {
                 Pair pair = queue.poll();
                 int distance = grid[pair.i][pair.j];
-                grid[0][0] = Integer.MIN_VALUE;
-                //Top
-
-                if (isValid(pair.i - distance, pair.j, m, n) && grid[(pair.i - distance)][pair.j] != Integer.MIN_VALUE) {
+                //Move towards Top
+                if (isValid(pair.i - distance, pair.j, m, n) && visted[(pair.i - distance)][pair.j] != -1) {
                     if (pair.i - distance == distI && pair.j == distJ) {
                         return count;
                     }
                     queue.add(new Pair(pair.i - distance, pair.j));
+                    visted[(pair.i - distance)][pair.j] = -1;
                 }
-                //Left
-                if (isValid(pair.i, pair.j - distance, m, n) && grid[(pair.i)][pair.j - distance] != Integer.MIN_VALUE) {
+                //Move towards  Left
+                if (isValid(pair.i, pair.j - distance, m, n) && visted[(pair.i)][pair.j - distance] != -1) {
                     if (pair.i == distI && pair.j - distance == distJ) {
                         return count;
                     }
                     queue.add(new Pair(pair.i, pair.j - distance));
-
+                    visted[(pair.i)][pair.j - distance] = -1;
                 }
-                //Bottom
-                if (isValid(pair.i + distance, pair.j, m, n) && grid[(pair.i + distance)][pair.j] != Integer.MIN_VALUE) {
+                //Move towards  Bottom
+                if (isValid(pair.i + distance, pair.j, m, n) && visted[(pair.i + distance)][pair.j] != -1) {
                     if (pair.i + distance == distI && pair.j == distJ) {
                         return count;
                     }
                     queue.add(new Pair(pair.i + distance, pair.j));
-
+                    visted[(pair.i + distance)][pair.j] = -1;
                 }
 
-                //Right
-                if (isValid(pair.i, pair.j + distance, m, n) && grid[(pair.i)][pair.j + distance] != Integer.MIN_VALUE) {
+                //Move towards  Right
+                if (isValid(pair.i, pair.j + distance, m, n) && visted[(pair.i)][pair.j + distance] != -1) {
                     if (pair.i == distI && pair.j + distance == distJ) {
                         return count;
                     }
                     queue.add(new Pair(pair.i, pair.j + distance));
-
+                    visted[(pair.i)][pair.j + distance] = -1;
                 }
-                grid[(pair.i)][pair.j] = Integer.MIN_VALUE;
 
             }
         }
