@@ -23,53 +23,71 @@ public class grid {
         int m = grid.length;
         int n = grid[0].length;
         /**
-         * visted array to store the visited indexes
+         * visited array to store the visited indexes of the grid
          */
-        int visted[][] = new int[m][n];
+        int visited[][] = new int[m][n];
+        /**
+         * queue to process BFS
+         */
         Queue<Pair> queue = new LinkedList<>();
         queue.add(new Pair(0, 0));
-        visted[0][0] = -1;
+        visited[0][0] = -1;
         int count = 0;
-        int distI = grid.length - 1;
-        int distJ = grid[0].length - 1;
+        /**
+         * Store the current coordinates in currentI,currentJ
+         */
+        int currentI = grid.length - 1;
+        int currentJ = grid[0].length - 1;
         while (!queue.isEmpty()) {
             int qs = queue.size();
             count++;
             while (qs-- > 0) {
                 Pair pair = queue.poll();
                 int distance = grid[pair.i][pair.j];
-                //Move towards Top
-                if (isValid(pair.i - distance, pair.j, m, n) && visted[(pair.i - distance)][pair.j] != -1) {
-                    if (pair.i - distance == distI && pair.j == distJ) {
+                //Validate and Move towards Top
+                if (isValid(pair.i - distance, pair.j, m, n) && visited[(pair.i - distance)][pair.j] != -1) {
+                    if (pair.i - distance == currentI && pair.j == currentJ) {
                         return count;
                     }
+                    /**
+                     * Add the adjacent square into queue and mark it as visited
+                     */
                     queue.add(new Pair(pair.i - distance, pair.j));
-                    visted[(pair.i - distance)][pair.j] = -1;
+                    visited[(pair.i - distance)][pair.j] = -1;
                 }
-                //Move towards  Left
-                if (isValid(pair.i, pair.j - distance, m, n) && visted[(pair.i)][pair.j - distance] != -1) {
-                    if (pair.i == distI && pair.j - distance == distJ) {
+                //Validate and Move towards Left
+                if (isValid(pair.i, pair.j - distance, m, n) && visited[(pair.i)][pair.j - distance] != -1) {
+                    if (pair.i == currentI && pair.j - distance == currentJ) {
                         return count;
                     }
+                    /**
+                     * Add the adjacent square into queue and mark it as visited
+                     */
                     queue.add(new Pair(pair.i, pair.j - distance));
-                    visted[(pair.i)][pair.j - distance] = -1;
+                    visited[(pair.i)][pair.j - distance] = -1;
                 }
-                //Move towards  Bottom
-                if (isValid(pair.i + distance, pair.j, m, n) && visted[(pair.i + distance)][pair.j] != -1) {
-                    if (pair.i + distance == distI && pair.j == distJ) {
+                //Validate and Move towards Bottom
+                if (isValid(pair.i + distance, pair.j, m, n) && visited[(pair.i + distance)][pair.j] != -1) {
+                    if (pair.i + distance == currentI && pair.j == currentJ) {
                         return count;
                     }
+                    /**
+                     * Add the adjacent square into queue and mark it as visited
+                     */
                     queue.add(new Pair(pair.i + distance, pair.j));
-                    visted[(pair.i + distance)][pair.j] = -1;
+                    visited[(pair.i + distance)][pair.j] = -1;
                 }
 
-                //Move towards  Right
-                if (isValid(pair.i, pair.j + distance, m, n) && visted[(pair.i)][pair.j + distance] != -1) {
-                    if (pair.i == distI && pair.j + distance == distJ) {
+                //Validate and Move towards Right
+                if (isValid(pair.i, pair.j + distance, m, n) && visited[(pair.i)][pair.j + distance] != -1) {
+                    if (pair.i == currentI && pair.j + distance == currentJ) {
                         return count;
                     }
+                    /**
+                     * Add the adjacent square into queue and mark it as visited
+                     */
                     queue.add(new Pair(pair.i, pair.j + distance));
-                    visted[(pair.i)][pair.j + distance] = -1;
+                    visited[(pair.i)][pair.j + distance] = -1;
                 }
 
             }
@@ -79,6 +97,9 @@ public class grid {
 
     }
 
+    /**
+     * Helper method to validate the coordinates
+     */
     private static boolean isValid(int i, int j, int m, int n) {
         return i >= 0 && i < m && j >= 0 && j < n;
     }
@@ -89,18 +110,19 @@ public class grid {
         int n = Integer.parseInt(size[0]);
         int m = Integer.parseInt(size[1]);
         int dp[][] = new int[n][m];
-        int ri = 0;
-        while (ri < n) {
-            int rj = 0;
+        int row = 0;
+        while (row < n) {
+            int col = 0;
             String colNums[] = bf.readLine().split("");
-            while (rj < colNums.length) {
-                dp[ri][rj] = Integer.parseInt(colNums[rj]);
-                rj++;
+            while (col < colNums.length) {
+                dp[row][col] = Integer.parseInt(colNums[col]);
+                col++;
             }
-            ri++;
+            row++;
 
         }
         System.out.println(bfs(dp));
 
     }
 }
+
