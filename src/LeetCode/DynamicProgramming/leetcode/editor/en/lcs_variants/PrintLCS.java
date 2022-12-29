@@ -1,13 +1,16 @@
-import jdk.jfr.internal.tool.Main;
+package LeetCode.DynamicProgramming.leetcode.editor.en.lcs_variants;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.*;
+public class PrintLCS {
+    private String dp[][];
 
-class Mainy {
+    public void printLCS(String s1, String s2) {
+        dp = new String[s1.length()][s2.length()];
+        String lcs = findLcs(s1, s2, 0, 0);
+        System.out.println(lcs);
 
+    }
 
-  /*  private String findLcs(String s1, String s2, int i, int j) {
+    private String findLcs(String s1, String s2, int i, int j) {
         if (i == s1.length() || j == s2.length()) {
             return "";
         }
@@ -18,6 +21,9 @@ class Mainy {
         }
         String left = findLcs(s1, s2, i + 1, j);
         String right = findLcs(s1, s2, i, j + 1);
+        /**
+         * You can tweak the below to get min/max costed lcs
+         */
         if (left.length() > right.length()) {
             dp[i][j] = left;
         } else if (left.length() < right.length()) {
@@ -32,13 +38,5 @@ class Mainy {
         }
 
         return dp[i][j];
-    }*/
-
-
-
-    public static void main(String[] args) {
-
     }
-
 }
-

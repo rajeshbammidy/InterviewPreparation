@@ -1,3 +1,5 @@
+package LeetCode.Nov22.leetcode.editor.en;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -45,7 +47,7 @@ import java.util.List;
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution212 {
     List<String> ans;
     //T,L,B,R
     final int xDir[] = {-1, 0, 1, 0};
