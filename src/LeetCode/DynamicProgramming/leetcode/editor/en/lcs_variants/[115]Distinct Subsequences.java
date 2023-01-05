@@ -45,7 +45,7 @@ package LeetCode.DynamicProgramming.leetcode.editor.en.lcs_variants;
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution712 {
+class Solution115 {
     static Integer dp[][];
 
     public int numDistinct(String s, String t) {
