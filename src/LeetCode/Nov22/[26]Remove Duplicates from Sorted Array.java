@@ -1,4 +1,4 @@
-package LeetCode.Nov22.leetcode.editor.en;
+package LeetCode.Nov22;
 
 /**
  * Given an integer array nums sorted in non-decreasing order, remove the

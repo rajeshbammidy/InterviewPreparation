@@ -1,4 +1,4 @@
-package LeetCode.Nov22.leetcode.editor.en;
+package LeetCode.Nov22;
 
 /**
  * You are given a positive integer num consisting only of digits 6 and 9.

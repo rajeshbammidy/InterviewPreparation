@@ -1,4 +1,4 @@
-package LeetCode.Nov22.leetcode.editor.en;
+package LeetCode.Nov22;
 
 /**
  * Given the coordinates of two rectilinear rectangles in a 2D plane, return the

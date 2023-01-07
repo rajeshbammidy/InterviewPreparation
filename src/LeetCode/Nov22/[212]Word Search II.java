@@ -1,4 +1,4 @@
-package LeetCode.Nov22.leetcode.editor.en;
+package LeetCode.Nov22;
 
 import java.util.ArrayList;
 import java.util.HashMap;
