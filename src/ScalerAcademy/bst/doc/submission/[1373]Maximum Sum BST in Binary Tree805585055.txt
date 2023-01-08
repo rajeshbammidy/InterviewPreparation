@@ -48,7 +48,7 @@ class Solution1373 {
 
 //total_correct:null
 //compile_error:Line 7: error: cannot find symbol [in __Driver__.java]
-      int ret = new LeetCode.Oct22.Solution().maxSumBST(param_1);
+      int ret = new LeetCode.Oct22.LeetCode.DynamicProgramming.leetcode.editor.en.partition_subset.Solution().maxSumBST(param_1);
                     ^
-  symbol:   class LeetCode.Oct22.Solution
+  symbol:   class LeetCode.Oct22.LeetCode.DynamicProgramming.leetcode.editor.en.partition_subset.Solution
   location: class __DriverSolution__
