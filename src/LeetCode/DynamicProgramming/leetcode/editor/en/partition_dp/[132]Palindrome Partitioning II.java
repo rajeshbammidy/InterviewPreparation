@@ -1,10 +1,49 @@
+package LeetCode.DynamicProgramming.leetcode.editor.en.partition_dp;
 
+/**
+Given a string s, partition s such that every substring of the partition is a 
+palindrome. 
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.*;
+ Return the minimum cuts needed for a palindrome partitioning of s. 
 
-public class Main {
+ 
+ Example 1: 
+
+ 
+Input: s = "aab"
+Output: 1
+Explanation: The palindrome partitioning ["aa","b"] could be produced using 1 
+cut.
+ 
+
+ Example 2: 
+
+ 
+Input: s = "a"
+Output: 0
+ 
+
+ Example 3: 
+
+ 
+Input: s = "ab"
+Output: 1
+ 
+
+ 
+ Constraints: 
+
+ 
+ 1 <= s.length <= 2000 
+ s consists of lowercase English letters only. 
+ 
+
+ Related Topics String Dynamic Programming 👍 4367 👎 100
+
+*/
+
+//leetcode submit region begin(Prohibit modification and deletion)
+class Solution {
     Integer dp[][];
     static int MAX_VALUE = (int) 1e4;
 
@@ -22,8 +61,8 @@ public class Main {
         if (dp[i][j] != null) return dp[i][j];
         int min = MAX_VALUE;
         /**
-         * Recursively call only when the left substring is a palindrome.
-         * You might be thinking "If the left substring is not palindrome we can partition it further to get the min partitions at i"
+         * Recursively call the right part only when the left substring is a palindrome.
+         * You might be thinking "If the left substring is not palindrome we can partition it further, to get the min partitions at i"
          * But those partitions can be taken care by the right recursive call we make,so we dont have make the left recursive call
          * again and again
          *
@@ -49,12 +88,5 @@ public class Main {
         }
         return true;
     }
-
-
-    public static void main(String[] args) {
-        System.out.println(new Main().minCut("abc"));
-    }
-
-
 }
-
+//leetcode submit region end(Prohibit modification and deletion)

@@ -1,3 +1,5 @@
+package LeetCode.DynamicProgramming.leetcode.editor.en;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -38,7 +40,7 @@ import java.util.Arrays;
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution152 {
     public int maxProduct(int[] nums) {
         int max = 1, min = 1;
         int ans = Integer.MIN_VALUE;
