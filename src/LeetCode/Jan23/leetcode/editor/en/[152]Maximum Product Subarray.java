@@ -1,4 +1,4 @@
-package LeetCode.DynamicProgramming.leetcode.editor.en;
+package LeetCode.Jan23.leetcode.editor.en;
 
 import java.util.ArrayList;
 import java.util.Arrays;

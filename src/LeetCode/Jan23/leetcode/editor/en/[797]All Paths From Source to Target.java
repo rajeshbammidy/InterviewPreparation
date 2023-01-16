@@ -1,4 +1,4 @@
-package LeetCode.DynamicProgramming.leetcode.editor.en; /**
+package LeetCode.Jan23.leetcode.editor.en; /**
  * Given a directed acyclic graph (DAG) of n nodes labeled from 0 to n - 1, find
  * all possible paths from node 0 to node n - 1 and return them in any order.
  *
@@ -41,7 +41,7 @@ package LeetCode.DynamicProgramming.leetcode.editor.en; /**
 
 import java.util.*;
 
-class Solution {
+class Solution797 {
     private List<List<Integer>> result;
 
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {

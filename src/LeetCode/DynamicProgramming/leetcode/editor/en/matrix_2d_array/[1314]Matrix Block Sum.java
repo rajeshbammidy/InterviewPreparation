@@ -1,4 +1,4 @@
-package LeetCode.DynamicProgramming.leetcode.editor.en;
+package LeetCode.DynamicProgramming.leetcode.editor.en.matrix_2d_array;
 
 import java.util.Arrays;
 

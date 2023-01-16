@@ -49,7 +49,7 @@ import java.util.Map;
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution2244 {
     public int minimumRounds(int[] tasks) {
         int rounds = 0;
         HashMap<Integer, Integer> map = new HashMap<>();
