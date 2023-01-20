@@ -46,7 +46,7 @@ import java.util.ArrayList;
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution57 {
     static class Node {
         int x, y;
 

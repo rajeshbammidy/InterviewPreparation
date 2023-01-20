@@ -78,7 +78,7 @@ import java.util.TreeMap;
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution2421 {
     static int parent[];
     static int rank[];
     private static List<List<Integer>> adjacencyList;
