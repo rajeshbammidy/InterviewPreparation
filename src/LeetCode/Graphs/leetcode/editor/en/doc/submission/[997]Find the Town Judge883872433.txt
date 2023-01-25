@@ -1,0 +1,19 @@
+class LeetCode.Jan23.leetcode.editor.en.Solution {
+     public int findJudge(int n, int[][] trust) {
+        if(trust.length==0 && n==1)return 1;
+        if(trust.length==0)return -1;
+        HashMap<Integer, Integer> keyMap = new HashMap();
+        HashMap<Integer, Integer> valueMap = new HashMap();
+        for (int i = 0; i < trust.length; i++) {
+            keyMap.put(trust[i][0], keyMap.getOrDefault(trust[i][0], 0) + 1);
+            valueMap.put(trust[i][1], valueMap.getOrDefault(trust[i][1], 0) + 1);
+        }
+        for (int i = 1; i <= n; i++) {
+            if (valueMap.containsKey(i) && (valueMap.get(i) == n - 1) && !keyMap.containsKey(i)) return i;
+        }
+        return -1;
+
+    }
+}
+//runtime:45 ms
+//memory:74.8 MB
