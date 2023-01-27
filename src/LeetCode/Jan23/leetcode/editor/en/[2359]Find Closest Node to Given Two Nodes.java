@@ -60,7 +60,7 @@ import java.util.LinkedHashSet;
 //leetcode submit region begin(Prohibit modification and deletion)
 import java.util.*;
 
-class Solution {
+class Solution2359 {
     /**
      * Intuition : Since the graph is unweighted we can use BFS/DFS to find the shortest path the start vertex to all
      * other vertices.
