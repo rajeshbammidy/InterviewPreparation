@@ -1,4 +1,4 @@
-package LeetCode.Jan23.leetcode.editor.en;
+package LeetCode.Jan23;
 
 /**
  * There are n gas stations along a circular route, where the amount of gas at the

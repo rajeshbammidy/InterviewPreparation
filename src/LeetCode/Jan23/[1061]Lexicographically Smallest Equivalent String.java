@@ -1,4 +1,4 @@
-package LeetCode.Jan23.leetcode.editor.en;
+package LeetCode.Jan23;
 
 /**
  * You are given two strings of the same length s1 and s2 and a string baseStr.

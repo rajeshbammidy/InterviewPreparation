@@ -1,4 +1,4 @@
-package LeetCode.Jan23.leetcode.editor.en; /**
+package LeetCode.Jan23; /**
  * Given the root of a binary tree, return the preorder traversal of its nodes'
  * values.
  *

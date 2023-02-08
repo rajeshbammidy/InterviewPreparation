@@ -1,4 +1,4 @@
-class LeetCode.Jan23.leetcode.editor.en.Solution {
+class LeetCode.Jan23.Solution {
     public int removeStones(int[][] stones) {
  
         HashSet<Pair <Integer,Integer>> visited = new HashSet<>(); 

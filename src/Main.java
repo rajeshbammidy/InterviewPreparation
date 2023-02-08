@@ -8,48 +8,155 @@ import java.util.*;
 import java.util.stream.Stream;
 
 public class Main {
-    public int closestMeetingNode(int[] edges, int node1, int node2) {
-        int n = edges.length;
-        long node1Dist[] = new long[n];
-        long node2Dist[] = new long[n];
-        Arrays.fill(node1Dist, Integer.MAX_VALUE);
-        Arrays.fill(node2Dist, Integer.MAX_VALUE);
-        node1Dist[node1] = 0;
-        node2Dist[node2] = 0;
-        dfs(node1, node1Dist, edges, 0);
-        dfs(node2, node2Dist, edges, 0);
-        System.out.println(Arrays.toString(node1Dist));
-        System.out.println(Arrays.toString(node2Dist));
-        int minMaxDistance = Integer.MAX_VALUE;
-        int index = -1;
-        for (int i = 0; i < n; i++) {
-            if (node1Dist[i] != Integer.MAX_VALUE && node1Dist[i] != Integer.MAX_VALUE) {
-                if (minMaxDistance > Math.max(node1Dist[i], node2Dist[i])) {
-                    minMaxDistance = (int) Math.max(node1Dist[i], node2Dist[i]);
-                    index = i;
+    static class Node {
+        int i;
+        int j;
+        int distance;
+
+        public Node(int i, int j, int distance) {
+            this.i = i;
+            this.j = j;
+            this.distance = distance;
+        }
+    }
+
+    public int[][] updateMatrix(int[][] mat) {
+        int m = mat.length;
+        int n = mat[0].length;
+        int res[][] = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (mat[i][j] == 1) {
+                    int distance = findDistance(mat, i, j);
+                    res[i][j] = distance;
+                } else {
+                    res[i][j] = 0;
                 }
             }
-            System.out.println(index);
-
 
         }
-        return index;
+        return res;
 
     }
 
-    private void dfs(int node1, long nodeDist[], int[] edges, int distance) {
-        if (node1 == -1) return;
+    private int findDistance(int[][] mat, int i, int j) {
+        int m = mat.length;
+        int n = mat[0].length;
+        Queue<Solution.Node> queue = new LinkedList<>();
+        HashSet<Pair<Integer, Integer>> visited = new HashSet<>();
+        queue.add(new Solution.Node(i, j, 0));
+        visited.add(new Pair<Integer, Integer>(i, j));
+        int dirX[] = {0, -1, 0, 1};
+        int dirY[] = {-1, 0, 1, 0};
+        while (!queue.isEmpty()) {
+            Solution.Node node = queue.poll();
+            for (int k = 0; k < dirX.length; k++) {
+                int nextRow = dirX[k] + node.i;
+                int nextCol = dirY[k] + node.j;
 
-        int next = edges[node1];
-        if (next == -1) return;
-        if (nodeDist[next] > distance + 1) {
-            nodeDist[next] = distance + 1;
-            dfs(next, nodeDist, edges, distance + 1);
+                if (isValid(nextRow, nextCol, m, n) && !visited.contains(new Pair<Integer, Integer>(nextRow, nextCol))) {
+                    if (mat[nextRow][nextCol] == 0) return node.distance + 1;
+                    queue.add(new Solution.Node(nextRow, nextCol, node.distance + 1));
+                    visited.add(new Pair<Integer, Integer>(nextRow, nextCol));
+                }
+
+            }
+
         }
+        return -1;
+
+    }
+
+    private boolean isValid(int nextRow, int nextCol, int m, int n) {
+        return nextRow >= 0 && nextRow < m && nextCol >= 0 && nextCol < n;
     }
 
     public static void main(String[] args) {
-        System.out.println(new Main().closestMeetingNode(new int[]{5, -1, 3, 4, 5, 6, -1, -1, 4, 3}, 0, 0));
+
+        List<String> queries = Arrays.asList("Friend", "Total");
+        List<Integer> s1 = Arrays.asList(1, 2);
+        List<Integer> s2 = Arrays.asList(2, 3);
+        System.out.println(new Main().solve(3, queries, s1, s2));
+    }
+
+    public boolean isAlienSorted(String[] words, String order) {
+        words = new String[]{"hello", "app"};
+        order = "abcdefghijklmnopqrstuvwxyz";
+        ArrayList<Character> list = new ArrayList<Character>();
+        for (char ch : order.toCharArray()) {
+            list.add(ch);
+        }
+        for (int i = 1; i < words.length; i++) {
+            if (!compare(words[i - 1], words[i], list)) {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+    private boolean compare(String word, String word1, ArrayList<Character> list) {
+        int i = 0;
+        while (i < word.length() && i < word1.length()) {
+            if (word.charAt(i) == word1.charAt(i)) i++;
+            else if (list.indexOf(word.charAt(i)) > list.indexOf(word1.charAt(i))) return false;
+            else return true;
+        }
+        if (word.length() > word1.length()) return false;
+        return true;
+    }
+
+
+    static int parent[];
+    static int height[];
+
+    /**
+     * PathCompression
+     */
+    static int find(int x) {
+        if (x == parent[x]) return x;
+        parent[x] = find(parent[x]);
+        return parent[x];
+    }
+
+    /**
+     * Union By Rank
+     */
+    static void union(int x, int y) {
+        int x_rep = find(x);
+        int y_rep = find(y);
+        if (x_rep == y_rep) return;
+        if (height[x_rep] > height[y_rep]) {
+            parent[y_rep] = x_rep;
+        } else if (height[x_rep] < height[y_rep]) {
+            parent[x_rep] = y_rep;
+        } else {
+            parent[y_rep] = x_rep;
+            height[x_rep]++;
+        }
+
+    }
+
+    int solve(int n, List<String> query, List<Integer> student1, List<Integer> student2) {
+        parent = new int[n + 1];
+        height = new int[n + 1];
+        int ans = 0;
+
+        for (int i = 0; i < query.size(); i++) {
+            String q = query.get(i);
+            if (q.equals("Friend")) {
+                union(student1.get(i), student2.get(i));
+            } else {
+                int xP = find(student1.get(i));
+                int yP = find(student2.get(i));
+                for (int j = 1; j <= n; j++) {
+                    if (find(j) == xP || yP == find(j)) ans++;
+                }
+
+            }
+        }
+        return ans;
+
     }
 
 }

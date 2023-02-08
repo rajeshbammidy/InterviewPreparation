@@ -1,4 +1,4 @@
-package LeetCode.Graphs.leetcode.editor.en;
+package LeetCode.Jan23;
 
 import javafx.util.Pair;
 

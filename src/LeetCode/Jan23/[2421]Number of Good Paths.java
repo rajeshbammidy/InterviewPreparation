@@ -1,4 +1,4 @@
-package LeetCode.Jan23.leetcode.editor.en;
+package LeetCode.Jan23;
 
 import sun.security.provider.certpath.AdjacencyList;
 

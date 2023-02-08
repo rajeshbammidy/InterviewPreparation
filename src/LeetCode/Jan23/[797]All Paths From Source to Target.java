@@ -1,4 +1,4 @@
-package LeetCode.Jan23.leetcode.editor.en; /**
+package LeetCode.Jan23; /**
  * Given a directed acyclic graph (DAG) of n nodes labeled from 0 to n - 1, find
  * all possible paths from node 0 to node n - 1 and return them in any order.
  *

@@ -1,4 +1,4 @@
-package LeetCode.Jan23.leetcode.editor.en;
+package LeetCode.Jan23;
 
 /**
  * We define the usage of capitals in a word to be right when one of the following

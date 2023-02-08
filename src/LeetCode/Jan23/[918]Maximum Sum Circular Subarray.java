@@ -1,4 +1,4 @@
-package LeetCode.Jan23.leetcode.editor.en;
+package LeetCode.Jan23;
 
 /**
  * Given a circular integer array nums of length n, return the maximum possible
