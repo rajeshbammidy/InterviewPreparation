@@ -71,12 +71,11 @@ public class Main {
         return nextRow >= 0 && nextRow < m && nextCol >= 0 && nextCol < n;
     }
 
-    public static void main(String[] args) {
+    static Integer dp[][];
 
-        List<String> queries = Arrays.asList("Friend", "Total");
-        List<Integer> s1 = Arrays.asList(1, 2);
-        List<Integer> s2 = Arrays.asList(2, 3);
-        System.out.println(new Main().solve(3, queries, s1, s2));
+    public static void main(String[] args) {
+        dp = new Integer[4][(int) 1e6];
+        System.out.println(new Main().getMinCost(new int[]{1, 1, 3, 4}, new int[]{3, 1, 2, 3}, 4, 0, 0, 0));
     }
 
     public boolean isAlienSorted(String[] words, String order) {
@@ -157,6 +156,64 @@ public class Main {
         }
         return ans;
 
+    }
+
+
+    int solve(int n, int initialEnergy[], int th) {
+
+        int beg = 0;
+        int end = Integer.MAX_VALUE;
+        while (beg <= end) {
+            int mid = beg + (end - beg) / 2;
+            int sum = findSum(initialEnergy, mid);
+            if (sum < th) {
+                end = mid - 1;
+            } else {
+                beg = mid + 1;
+            }
+        }
+        return beg - 1;
+    }
+
+    private int findSum(int[] initialEnergy, int mid) {
+        int sum = 0;
+        for (int x : initialEnergy) {
+            sum += Math.max(x - mid, 0);
+        }
+        return sum;
+    }
+
+    private static int getMinCost(int[] cost, int[] time, int N, int pTask, int pTime, int index) {
+        if (pTime >= (N - pTask)) {
+            return 0;
+        }
+        if (index == N) return Integer.MAX_VALUE;
+        if (dp[index][N - pTask - pTime] == null) {
+            for (int i = index; i < N; i++) {
+
+            }
+            int lt = getMinCost(cost, time, N, pTask + 1, pTime + time[index], index + 1);
+            if (lt != Integer.MAX_VALUE) {
+                lt += cost[index];
+            }
+            int rt = getMinCost(cost, time, N, pTask, pTime, index + 1);
+
+            dp[index][N - pTask - pTime] = Math.min(lt, rt);
+        }
+        return dp[index][N - pTask - pTime];
+
+    }
+
+    static class Task {
+        int idx;
+        int cost;
+        int time;
+
+        public Task(int idx, int cost, int time) {
+            this.idx = idx;
+            this.cost = cost;
+            this.time = time;
+        }
     }
 
 }
