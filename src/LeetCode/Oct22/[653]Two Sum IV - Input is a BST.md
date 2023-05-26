@@ -1,4 +1,4 @@
-<p>Given the <code>root</code> of a Binary Search Tree and a target number <code>k</code>, return <em><code>true</code> if there exist two elements in the BST such that their sum is equal to the given target</em>.</p>
+<p>Given the <code>root</code> of a Binary Search Tree and a target number <code>k</code>, return <em><code>true</code> if there exist two elements in the TopicWiseSolutions.Strings.BST such that their sum is equal to the given target</em>.</p>
 
 <p>&nbsp;</p> 
 <p><strong>Example 1:</strong></p> 

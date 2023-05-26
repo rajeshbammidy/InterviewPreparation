@@ -68,7 +68,7 @@ class Solution433 {
     public int minMutation(String start, String end, String[] bank) {
         // if the length of start and end are not equal
         if (start.length() != end.length()) return -1;
-        //Queue to mutate one char at a time
+        //TopicWiseSolutions.Strings.Queue to mutate one char at a time
         Queue<String> queue = new LinkedList<>();
         HashSet<String> visitedGene = new HashSet<>();
         queue.add(start);

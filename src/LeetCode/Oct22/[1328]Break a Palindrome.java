@@ -40,7 +40,7 @@ package LeetCode.Oct22;//Given a palindromic string of lowercase English letters
 // palindrome consists of only lowercase English letters. 
 // 
 //
-// Related Topics String Greedy 👍 1773 👎 641
+// Related Topics String TopicWiseSolutions.Greedy 👍 1773 👎 641
 
 
 //leetcode submit region begin(Prohibit modification and deletion)

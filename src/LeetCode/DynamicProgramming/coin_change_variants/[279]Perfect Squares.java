@@ -32,7 +32,7 @@ package LeetCode.DynamicProgramming.coin_change_variants;
  * 1 <= n <= 10⁴
  *
  *
- * Related Topics Math Dynamic Programming Breadth-First Search 👍 8913 👎 388
+ * Related Topics TopicWiseSolutions.Strings.Math Dynamic Programming Breadth-First Search 👍 8913 👎 388
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

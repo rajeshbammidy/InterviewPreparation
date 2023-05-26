@@ -32,4 +32,4 @@
  <li>All the integers in <code>nums</code> are <strong>unique</strong>.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Math</li><li>Dynamic Programming</li><li>Sorting</li></div></div><br><div><li>👍 3982</li><li>👎 165</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Strings.Math</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 3982</li><li>👎 165</li></div>

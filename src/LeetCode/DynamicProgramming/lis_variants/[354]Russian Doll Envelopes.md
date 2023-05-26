@@ -31,4 +31,4 @@
  <li><code>1 &lt;= w<sub>i</sub>, h<sub>i</sub> &lt;= 10<sup>5</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Binary Search</li><li>Dynamic Programming</li><li>Sorting</li></div></div><br><div><li>👍 4807</li><li>👎 115</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Binary Search</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 4807</li><li>👎 115</li></div>

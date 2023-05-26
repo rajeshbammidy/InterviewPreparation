@@ -54,7 +54,7 @@ package LeetCode.FEB23;
  * 0 <= capital[i] <= 10⁹
  *
  *
- * Related Topics Array Greedy Sorting Heap (Priority Queue) 👍 2371 👎 155
+ * Related Topics Array TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting Heap (Priority TopicWiseSolutions.Strings.Queue) 👍 2371 👎 155
  */
 
 import javafx.util.Pair;

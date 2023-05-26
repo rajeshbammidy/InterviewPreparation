@@ -29,4 +29,4 @@
  <li><code>-10<sup>4</sup> &lt;= by1 &lt;= by2 &lt;= 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Math</li><li>Geometry</li></div></div><br><div><li>👍 1592</li><li>👎 1507</li></div>
+<div><div>Related Topics</div><div><li>TopicWiseSolutions.Strings.Math</li><li>Geometry</li></div></div><br><div><li>👍 1592</li><li>👎 1507</li></div>

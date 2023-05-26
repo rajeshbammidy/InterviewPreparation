@@ -55,7 +55,7 @@ package LeetCode.Jan23;
  * 0 <= gas[i], cost[i] <= 10⁴
  *
  *
- * Related Topics Array Greedy 👍 7659 👎 709
+ * Related Topics Array TopicWiseSolutions.Greedy 👍 7659 👎 709
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

@@ -23,4 +23,4 @@
  <li><code>-100 &lt;= nums[i] &lt;= 100</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>Backtracking</li><li>Bit Manipulation</li></div></div><br><div><li>👍 1869</li><li>👎 164</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>TopicWiseSolutions.Strings.Backtracking</li><li>Bit Manipulation</li></div></div><br><div><li>👍 1869</li><li>👎 164</li></div>

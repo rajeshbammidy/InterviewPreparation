@@ -23,4 +23,4 @@
  <li><code>1 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Math</li><li>Greedy</li><li>Sorting</li></div></div><br><div><li>👍 2086</li><li>👎 286</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Strings.Math</li><li>TopicWiseSolutions.Greedy</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 2086</li><li>👎 286</li></div>

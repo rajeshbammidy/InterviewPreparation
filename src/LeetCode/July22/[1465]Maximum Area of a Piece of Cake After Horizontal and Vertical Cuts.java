@@ -52,7 +52,7 @@ package LeetCode.July22;//You are given a rectangular cake of size h x w and two
 // All the elements in horizontalCuts are distinct. 
 // All the elements in verticalCuts are distinct. 
 // 
-// Related Topics Array Greedy Sorting 👍 1718 👎 281
+// Related Topics Array TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 1718 👎 281
 
 
 import java.util.Arrays;

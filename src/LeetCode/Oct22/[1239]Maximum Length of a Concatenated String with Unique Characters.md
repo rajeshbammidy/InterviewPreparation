@@ -45,4 +45,4 @@ Maximum length is 4.
  <li><code>arr[i]</code> contains only lowercase English letters.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>String</li><li>Backtracking</li><li>Bit Manipulation</li></div></div><br><div><li>👍 3049</li><li>👎 217</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>String</li><li>TopicWiseSolutions.Strings.Backtracking</li><li>Bit Manipulation</li></div></div><br><div><li>👍 3049</li><li>👎 217</li></div>

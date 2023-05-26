@@ -73,7 +73,7 @@ package LeetCode.Oct22;//You have n flower seeds. Every seed must be planted fir
 // 1 <= plantTime[i], growTime[i] <= 10⁴ 
 // 
 //
-// Related Topics Array Greedy Sorting 👍 1185 👎 67
+// Related Topics Array TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 1185 👎 67
 
 
 import java.util.ArrayList;

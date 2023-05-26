@@ -49,7 +49,7 @@ package LeetCode.FEB23.leetcode.editor.en;
  * -1000 <= satisfaction[i] <= 1000
  *
  *
- * Related Topics Array Dynamic Programming Greedy Sorting 👍 2638 👎 269
+ * Related Topics Array Dynamic Programming TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 2638 👎 269
  */
 
 import java.util.*;

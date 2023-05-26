@@ -39,4 +39,4 @@
  <li><code>1 &lt;= ages[i] &lt;= 1000</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>Sorting</li></div></div><br><div><li>👍 1089</li><li>👎 32</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 1089</li><li>👎 32</li></div>

@@ -22,4 +22,4 @@
  <li><code>0 &lt;= low &lt;= high&nbsp;&lt;= 10^9</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Math</li></div></div><br><div><li>👍 1498</li><li>👎 95</li></div>
+<div><div>Related Topics</div><div><li>TopicWiseSolutions.Strings.Math</li></div></div><br><div><li>👍 1498</li><li>👎 95</li></div>

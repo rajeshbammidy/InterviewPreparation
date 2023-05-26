@@ -49,4 +49,4 @@ medianFinder.findMedian(); // return 2.0
  <li>If <code>99%</code> of all integer numbers from the stream are in the range <code>[0, 100]</code>, how would you optimize your solution?</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Two Pointers</li><li>Design</li><li>Sorting</li><li>Heap (Priority Queue)</li><li>Data Stream</li></div></div><br><div><li>👍 9228</li><li>👎 176</li></div>
+<div><div>Related Topics</div><div><li>Two Pointers</li><li>Design</li><li>TopicWiseSolutions.Strings.Sorting</li><li>Heap (Priority TopicWiseSolutions.Strings.Queue)</li><li>Data Stream</li></div></div><br><div><li>👍 9228</li><li>👎 176</li></div>

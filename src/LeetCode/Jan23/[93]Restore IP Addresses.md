@@ -36,4 +36,4 @@
  <li><code>s</code> consists of digits only.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>String</li><li>Backtracking</li></div></div><br><div><li>👍 3482</li><li>👎 684</li></div>
+<div><div>Related Topics</div><div><li>String</li><li>TopicWiseSolutions.Strings.Backtracking</li></div></div><br><div><li>👍 3482</li><li>👎 684</li></div>

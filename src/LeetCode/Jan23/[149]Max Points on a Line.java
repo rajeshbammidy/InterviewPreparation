@@ -32,7 +32,7 @@ import java.util.HashMap;
  * All the points are unique.
  *
  *
- * Related Topics Array Hash Table Math Geometry 👍 1812 👎 268
+ * Related Topics Array Hash Table TopicWiseSolutions.Strings.Math Geometry 👍 1812 👎 268
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

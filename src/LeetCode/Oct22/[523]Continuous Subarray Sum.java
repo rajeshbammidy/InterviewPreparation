@@ -42,7 +42,7 @@ package LeetCode.Oct22;//Given an integer array nums and an integer k, return tr
 // 1 <= k <= 2³¹ - 1 
 // 
 //
-// Related Topics Array Hash Table Math Prefix Sum 👍 3832 👎 379
+// Related Topics Array Hash Table TopicWiseSolutions.Strings.Math Prefix Sum 👍 3832 👎 379
 
 
 import java.util.HashMap;

@@ -62,7 +62,7 @@ import java.util.PriorityQueue;
  * would you optimize your solution?
  * <p>
  * <p>
- * Related Topics Two Pointers Design Sorting Heap (Priority Queue) Data Stream 👍
+ * Related Topics Two Pointers Design TopicWiseSolutions.Strings.Sorting Heap (Priority TopicWiseSolutions.Strings.Queue) Data Stream 👍
  * 9228 👎 176
  */
 

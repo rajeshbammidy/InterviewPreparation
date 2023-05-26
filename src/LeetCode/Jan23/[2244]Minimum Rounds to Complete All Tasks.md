@@ -32,4 +32,4 @@ It can be shown that all the tasks cannot be completed in fewer than 4 rounds, s
  <li><code>1 &lt;= tasks[i] &lt;= 10<sup>9</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>Greedy</li><li>Counting</li></div></div><br><div><li>👍 2183</li><li>👎 60</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>TopicWiseSolutions.Greedy</li><li>Counting</li></div></div><br><div><li>👍 2183</li><li>👎 60</li></div>

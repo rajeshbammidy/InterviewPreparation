@@ -54,4 +54,4 @@
  <li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Greedy</li><li>Heap (Priority Queue)</li><li>Ordered Set</li></div></div><br><div><li>👍 2560</li><li>👎 134</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Greedy</li><li>Heap (Priority TopicWiseSolutions.Strings.Queue)</li><li>Ordered Set</li></div></div><br><div><li>👍 2560</li><li>👎 134</li></div>

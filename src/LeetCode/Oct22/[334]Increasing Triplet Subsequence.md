@@ -38,4 +38,4 @@
 <code>O(n)</code> time complexity and 
 <code>O(1)</code> space complexity?
 
-<div><div>Related Topics</div><div><li>Array</li><li>Greedy</li></div></div><br><div><li>👍 5606</li><li>👎 256</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Greedy</li></div></div><br><div><li>👍 5606</li><li>👎 256</li></div>

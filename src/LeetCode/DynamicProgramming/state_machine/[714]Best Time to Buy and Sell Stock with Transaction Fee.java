@@ -40,7 +40,7 @@ package LeetCode.DynamicProgramming.state_machine;
  * 0 <= fee < 5 * 10⁴
  *
  *
- * Related Topics Array Dynamic Programming Greedy 👍 4967 👎 122
+ * Related Topics Array Dynamic Programming TopicWiseSolutions.Greedy 👍 4967 👎 122
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

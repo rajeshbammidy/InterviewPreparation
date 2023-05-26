@@ -41,7 +41,7 @@ package LeetCode.Oct22;//Given an integer array nums, return true if there exist
 //O(n) time complexity and 
 //O(1) space complexity?
 //
-// Related Topics Array Greedy 👍 5606 👎 256
+// Related Topics Array TopicWiseSolutions.Greedy 👍 5606 👎 256
 
 
 //leetcode submit region begin(Prohibit modification and deletion)

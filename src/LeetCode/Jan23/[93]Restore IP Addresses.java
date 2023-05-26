@@ -46,7 +46,7 @@ import java.util.List;
  * s consists of digits only.
  *
  *
- * Related Topics String Backtracking 👍 3482 👎 684
+ * Related Topics String TopicWiseSolutions.Strings.Backtracking 👍 3482 👎 684
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

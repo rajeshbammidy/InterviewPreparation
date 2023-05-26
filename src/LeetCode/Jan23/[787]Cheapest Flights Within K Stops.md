@@ -49,4 +49,4 @@ The optimal path with no stops from city 0 to 2 is marked in red and has cost 50
  <li><code>src != dst</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Dynamic Programming</li><li>Depth-First Search</li><li>Breadth-First Search</li><li>Graph</li><li>Heap (Priority Queue)</li><li>Shortest Path</li></div></div><br><div><li>👍 7254</li><li>👎 316</li></div>
+<div><div>Related Topics</div><div><li>Dynamic Programming</li><li>Depth-First Search</li><li>Breadth-First Search</li><li>Graph</li><li>Heap (Priority TopicWiseSolutions.Strings.Queue)</li><li>Shortest Path</li></div></div><br><div><li>👍 7254</li><li>👎 316</li></div>

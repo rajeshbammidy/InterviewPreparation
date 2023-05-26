@@ -41,7 +41,7 @@ package LeetCode.FEB23;
  * 0 <= nums[i] <= 1000
  *
  *
- * Related Topics Array Dynamic Programming Greedy 👍 10732 👎 374
+ * Related Topics Array Dynamic Programming TopicWiseSolutions.Greedy 👍 10732 👎 374
  */
 
 class JumpGameIi {

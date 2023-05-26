@@ -33,4 +33,4 @@ Note that "i" comes before "love" due to a lower alphabetical order.
 <p>&nbsp;</p> 
 <p><strong>Follow-up:</strong> Could you solve it in <code>O(n log(k))</code> time and <code>O(n)</code> extra space?</p>
 
-<div><div>Related Topics</div><div><li>Hash Table</li><li>String</li><li>Trie</li><li>Sorting</li><li>Heap (Priority Queue)</li><li>Bucket Sort</li><li>Counting</li></div></div><br><div><li>👍 6246</li><li>👎 291</li></div>
+<div><div>Related Topics</div><div><li>Hash Table</li><li>String</li><li>Trie</li><li>TopicWiseSolutions.Strings.Sorting</li><li>Heap (Priority TopicWiseSolutions.Strings.Queue)</li><li>Bucket Sort</li><li>Counting</li></div></div><br><div><li>👍 6246</li><li>👎 291</li></div>

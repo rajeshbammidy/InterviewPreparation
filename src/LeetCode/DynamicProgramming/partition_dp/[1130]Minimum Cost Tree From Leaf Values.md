@@ -36,4 +36,4 @@ The first has a non-leaf node sum 36, and the second has non-leaf node sum 32.
  <li>It is guaranteed that the answer fits into a <strong>32-bit</strong> signed integer (i.e., it is less than 2<sup>31</sup>).</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Dynamic Programming</li><li>Stack</li><li>Greedy</li><li>Monotonic Stack</li></div></div><br><div><li>👍 3697</li><li>👎 246</li></div>
+<div><div>Related Topics</div><div><li>Dynamic Programming</li><li>Stack</li><li>TopicWiseSolutions.Greedy</li><li>Monotonic Stack</li></div></div><br><div><li>👍 3697</li><li>👎 246</li></div>

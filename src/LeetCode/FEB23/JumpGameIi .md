@@ -33,4 +33,4 @@
  <li><code>0 &lt;= nums[i] &lt;= 1000</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>Greedy</li></div></div><br><div><li>👍 10732</li><li>👎 374</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Greedy</li></div></div><br><div><li>👍 10732</li><li>👎 374</li></div>

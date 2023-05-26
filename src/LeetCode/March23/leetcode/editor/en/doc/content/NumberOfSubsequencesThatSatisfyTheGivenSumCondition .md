@@ -42,4 +42,4 @@ Number of valid subsequences (63 - 2 = 61).
  <li><code>1 &lt;= target &lt;= 10<sup>6</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Two Pointers</li><li>Binary Search</li><li>Sorting</li></div></div><br><div><li>👍 2096</li><li>👎 188</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Two Pointers</li><li>Binary Search</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 2096</li><li>👎 188</li></div>

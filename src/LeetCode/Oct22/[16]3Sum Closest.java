@@ -31,7 +31,7 @@ package LeetCode.Oct22;//Given an integer array nums of length n and an integer 
 // -10⁴ <= target <= 10⁴ 
 // 
 //
-// Related Topics Array Two Pointers Sorting 👍 7842 👎 430
+// Related Topics Array Two Pointers TopicWiseSolutions.Strings.Sorting 👍 7842 👎 430
 
 import java.util.*;
 

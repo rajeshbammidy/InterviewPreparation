@@ -37,4 +37,4 @@
  <li>Every number and running calculation will fit in a signed 32-bit integer.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Math</li><li>String</li><li>Stack</li><li>Recursion</li></div></div><br><div><li>👍 4799</li><li>👎 364</li></div>
+<div><div>Related Topics</div><div><li>TopicWiseSolutions.Strings.Math</li><li>String</li><li>Stack</li><li>TopicWiseSolutions.Strings.Recursion</li></div></div><br><div><li>👍 4799</li><li>👎 364</li></div>

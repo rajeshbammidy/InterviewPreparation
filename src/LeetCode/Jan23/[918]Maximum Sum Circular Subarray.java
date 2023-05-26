@@ -46,8 +46,8 @@ package LeetCode.Jan23;
  * -3 * 10⁴ <= nums[i] <= 3 * 10⁴
  *
  *
- * Related Topics Array Divide and Conquer Dynamic Programming Queue Monotonic
- * Queue 👍 5404 👎 233
+ * Related Topics Array Divide and Conquer Dynamic Programming TopicWiseSolutions.Strings.Queue Monotonic
+ * TopicWiseSolutions.Strings.Queue 👍 5404 👎 233
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

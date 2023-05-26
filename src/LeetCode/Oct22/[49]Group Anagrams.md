@@ -24,4 +24,4 @@
  <li><code>strs[i]</code> consists of lowercase English letters.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>String</li><li>Sorting</li></div></div><br><div><li>👍 12876</li><li>👎 384</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>String</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 12876</li><li>👎 384</li></div>

@@ -26,4 +26,4 @@
  <li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Math</li><li>Dynamic Programming</li><li>Breadth-First Search</li></div></div><br><div><li>👍 8913</li><li>👎 388</li></div>
+<div><div>Related Topics</div><div><li>TopicWiseSolutions.Strings.Math</li><li>Dynamic Programming</li><li>Breadth-First Search</li></div></div><br><div><li>👍 8913</li><li>👎 388</li></div>

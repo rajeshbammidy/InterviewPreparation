@@ -24,7 +24,7 @@ import java.util.List;
  * s contains only lowercase English letters.
  *
  *
- * Related Topics String Dynamic Programming Backtracking 👍 9222 👎 298
+ * Related Topics String Dynamic Programming TopicWiseSolutions.Strings.Backtracking 👍 9222 👎 298
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

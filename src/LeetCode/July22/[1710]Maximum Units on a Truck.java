@@ -43,7 +43,7 @@ package LeetCode.July22;
 // 1 <= numberOfBoxesi, numberOfUnitsPerBoxi <= 1000 
 // 1 <= truckSize <= 10⁶ 
 // 
-// Related Topics Array Greedy Sorting 👍 2104 👎 127
+// Related Topics Array TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 2104 👎 127
 
 
 import java.util.Arrays;

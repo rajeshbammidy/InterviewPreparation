@@ -26,7 +26,7 @@ package LeetCode.Oct22;//Given an array of strings strs, group the anagrams toge
 // strs[i] consists of lowercase English letters. 
 // 
 //
-// Related Topics Array Hash Table String Sorting 👍 12876 👎 384
+// Related Topics Array Hash Table String TopicWiseSolutions.Strings.Sorting 👍 12876 👎 384
 
 
 import java.util.*;

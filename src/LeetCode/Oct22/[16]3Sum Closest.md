@@ -30,4 +30,4 @@
  <li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Two Pointers</li><li>Sorting</li></div></div><br><div><li>👍 7842</li><li>👎 430</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Two Pointers</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 7842</li><li>👎 430</li></div>

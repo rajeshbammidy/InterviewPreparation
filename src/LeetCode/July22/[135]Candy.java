@@ -40,7 +40,7 @@ package LeetCode.July22;//There are n children standing in a line. Each child is
 // 1 <= n <= 2 * 10⁴ 
 // 0 <= ratings[i] <= 2 * 10⁴ 
 // 
-// Related Topics Array Greedy 👍 3766 👎 284
+// Related Topics Array TopicWiseSolutions.Greedy 👍 3766 👎 284
 
 
 import java.util.Arrays;

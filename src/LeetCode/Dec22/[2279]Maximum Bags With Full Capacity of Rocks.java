@@ -54,7 +54,7 @@ import java.util.ArrayList;
  * 1 <= additionalRocks <= 10⁹
  *
  *
- * Related Topics Array Greedy Sorting 👍 1301 👎 59
+ * Related Topics Array TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 1301 👎 59
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

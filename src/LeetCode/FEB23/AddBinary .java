@@ -21,7 +21,7 @@ package LeetCode.FEB23;
  * Each string does not contain leading zeros except for the zero itself.
  *
  *
- * Related Topics Math String Bit Manipulation Simulation 👍 7518 👎 741
+ * Related Topics TopicWiseSolutions.Strings.Math String Bit Manipulation Simulation 👍 7518 👎 741
  */
 
 class AddBinary {

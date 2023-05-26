@@ -37,7 +37,7 @@ package LeetCode.Oct22;//Given an array of strings words and an integer k, retur
 // 
 // Follow-up: Could you solve it in O(n log(k)) time and O(n) extra space? 
 //
-// Related Topics Hash Table String Trie Sorting Heap (Priority Queue) Bucket 
+// Related Topics Hash Table String Trie TopicWiseSolutions.Strings.Sorting Heap (Priority TopicWiseSolutions.Strings.Queue) Bucket
 //Sort Counting 👍 6246 👎 291
 
 

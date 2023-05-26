@@ -1,5 +1,5 @@
 package LeetCode.Oct22;//Given the root of a Binary Search Tree and a target number k, return true if
-//there exist two elements in the BST such that their sum is equal to the given 
+//there exist two elements in the TopicWiseSolutions.Strings.BST such that their sum is equal to the given
 //target. 
 //
 // 

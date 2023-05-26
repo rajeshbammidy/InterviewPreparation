@@ -44,4 +44,4 @@ and two 2s from [2,2,2,2] in 6 ways.
  <li><code>0 &lt;= target &lt;= 300</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>Two Pointers</li><li>Sorting</li><li>Counting</li></div></div><br><div><li>👍 2443</li><li>👎 289</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>Two Pointers</li><li>TopicWiseSolutions.Strings.Sorting</li><li>Counting</li></div></div><br><div><li>👍 2443</li><li>👎 289</li></div>

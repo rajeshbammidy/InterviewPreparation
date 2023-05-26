@@ -43,4 +43,4 @@ Therefore, you can't travel around the circuit once no matter where you start.
  <li><code>0 &lt;= gas[i], cost[i] &lt;= 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Greedy</li></div></div><br><div><li>👍 7659</li><li>👎 709</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Greedy</li></div></div><br><div><li>👍 7659</li><li>👎 709</li></div>

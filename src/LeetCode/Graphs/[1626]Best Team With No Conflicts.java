@@ -55,7 +55,7 @@ import java.util.Arrays;
  * 1 <= ages[i] <= 1000
  *
  *
- * Related Topics Array Dynamic Programming Sorting 👍 1089 👎 32
+ * Related Topics Array Dynamic Programming TopicWiseSolutions.Strings.Sorting 👍 1089 👎 32
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

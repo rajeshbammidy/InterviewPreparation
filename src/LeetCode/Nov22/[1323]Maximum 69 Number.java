@@ -44,7 +44,7 @@ package LeetCode.Nov22;
  * num consists of only 6 and 9 digits.
  * <p>
  * <p>
- * Related Topics Math Greedy 👍 1931 👎 172
+ * Related Topics TopicWiseSolutions.Strings.Math TopicWiseSolutions.Greedy 👍 1931 👎 172
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

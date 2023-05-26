@@ -51,7 +51,7 @@ import java.lang.reflect.Array;
  1 <= coins <= 10⁸ 
 
 
- Related Topics Array Greedy Sorting 👍 843 👎 377
+ Related Topics Array TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 843 👎 377
 
  */
 

@@ -18,4 +18,4 @@
  <li>Each string does not contain leading zeros except for the zero itself.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Math</li><li>String</li><li>Bit Manipulation</li><li>Simulation</li></div></div><br><div><li>👍 7518</li><li>👎 741</li></div>
+<div><div>Related Topics</div><div><li>TopicWiseSolutions.Strings.Math</li><li>String</li><li>Bit Manipulation</li><li>Simulation</li></div></div><br><div><li>👍 7518</li><li>👎 741</li></div>

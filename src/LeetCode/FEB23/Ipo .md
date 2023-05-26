@@ -41,4 +41,4 @@ Therefore, output the final maximized capital, which is 0 + 1 + 3 = 4.
  <li><code>0 &lt;= capital[i] &lt;= 10<sup>9</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Greedy</li><li>Sorting</li><li>Heap (Priority Queue)</li></div></div><br><div><li>👍 2371</li><li>👎 155</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Greedy</li><li>TopicWiseSolutions.Strings.Sorting</li><li>Heap (Priority TopicWiseSolutions.Strings.Queue)</li></div></div><br><div><li>👍 2371</li><li>👎 155</li></div>

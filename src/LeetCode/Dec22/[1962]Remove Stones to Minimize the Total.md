@@ -43,4 +43,4 @@ The total number of stones in [2,3,3,4] is 12.
  <li><code>1 &lt;= k &lt;= 10<sup>5</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Heap (Priority Queue)</li></div></div><br><div><li>👍 1330</li><li>👎 113</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Heap (Priority TopicWiseSolutions.Strings.Queue)</li></div></div><br><div><li>👍 1330</li><li>👎 113</li></div>

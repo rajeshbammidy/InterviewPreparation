@@ -78,7 +78,7 @@ import java.util.Queue;
  * 1 <= enqueueTimei, processingTimei <= 10⁹
  *
  *
- * Related Topics Array Sorting Heap (Priority Queue) 👍 2246 👎 194
+ * Related Topics Array TopicWiseSolutions.Strings.Sorting Heap (Priority TopicWiseSolutions.Strings.Queue) 👍 2246 👎 194
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)
@@ -127,7 +127,7 @@ class Solution1834 {
         int index = 0;
 
         /**
-         * Add the first frame to the waiting priority Queue
+         * Add the first frame to the waiting priority TopicWiseSolutions.Strings.Queue
          */
         if (!queue.isEmpty()) {
             pq.add(queue.poll());

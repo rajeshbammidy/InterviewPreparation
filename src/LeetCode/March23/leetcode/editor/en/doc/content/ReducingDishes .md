@@ -40,4 +40,4 @@ Each dish is prepared in one unit of time.</pre>
  <li><code>-1000 &lt;= satisfaction[i] &lt;= 1000</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>Greedy</li><li>Sorting</li></div></div><br><div><li>👍 2638</li><li>👎 269</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Greedy</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 2638</li><li>👎 269</li></div>

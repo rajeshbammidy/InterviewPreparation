@@ -53,4 +53,4 @@
  <li><code>1 &lt;= enqueueTime<sub>i</sub>, processingTime<sub>i</sub> &lt;= 10<sup>9</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Sorting</li><li>Heap (Priority Queue)</li></div></div><br><div><li>👍 2246</li><li>👎 194</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Strings.Sorting</li><li>Heap (Priority TopicWiseSolutions.Strings.Queue)</li></div></div><br><div><li>👍 2246</li><li>👎 194</li></div>

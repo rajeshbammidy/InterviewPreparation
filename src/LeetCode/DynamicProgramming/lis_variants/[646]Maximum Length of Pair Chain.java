@@ -41,7 +41,7 @@ import java.util.Collections;
  * -1000 <= lefti < righti <= 1000
  *
  *
- * Related Topics Array Dynamic Programming Greedy Sorting 👍 2749 👎 109
+ * Related Topics Array Dynamic Programming TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 2749 👎 109
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

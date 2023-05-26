@@ -34,4 +34,4 @@ The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
  <li><code>0 &lt;= fee &lt; 5 * 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>Greedy</li></div></div><br><div><li>👍 4967</li><li>👎 122</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Greedy</li></div></div><br><div><li>👍 4967</li><li>👎 122</li></div>

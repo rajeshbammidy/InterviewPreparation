@@ -1,4 +1,4 @@
-class LeetCode.Jan23.LeetCode.Graphs.Solution {
+class LeetCode.Jan23.LeetCode.TopicWiseSolutions.Graphs.Solution {
      public int findJudge(int n, int[][] trust) {
         if(trust.length==0 && n==1)return 1;
         if(trust.length==0)return -1;

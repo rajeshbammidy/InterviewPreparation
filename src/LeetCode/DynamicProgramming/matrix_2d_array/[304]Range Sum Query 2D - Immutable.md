@@ -4,10 +4,10 @@
  <li>Calculate the <strong>sum</strong> of the elements of <code>matrix</code> inside the rectangle defined by its <strong>upper left corner</strong> <code>(row1, col1)</code> and <strong>lower right corner</strong> <code>(row2, col2)</code>.</li> 
 </ul>
 
-<p>Implement the <code>LeetCode.DynamicProgramming.matrix_2d_array.NumMatrix</code> class:</p>
+<p>Implement the <code>LeetCode.TopicWiseSolutions.DynamicProgramming.matrix_2d_array.NumMatrix</code> class:</p>
 
 <ul> 
- <li><code>LeetCode.DynamicProgramming.leetcode.editor.en.matrix_2d_array.NumMatrix(int[][] matrix)</code> Initializes the object with the integer matrix <code>matrix</code>.</li> 
+ <li><code>LeetCode.TopicWiseSolutions.DynamicProgramming.leetcode.editor.en.matrix_2d_array.NumMatrix(int[][] matrix)</code> Initializes the object with the integer matrix <code>matrix</code>.</li> 
  <li><code>int sumRegion(int row1, int col1, int row2, int col2)</code> Returns the <strong>sum</strong> of the elements of <code>matrix</code> inside the rectangle defined by its <strong>upper left corner</strong> <code>(row1, col1)</code> and <strong>lower right corner</strong> <code>(row2, col2)</code>.</li> 
 </ul>
 
@@ -18,14 +18,14 @@
 <img alt="" src="https://assets.leetcode.com/uploads/2021/03/14/sum-grid.jpg" style="width: 415px; height: 415px;" /> 
 <pre>
 <strong>Input</strong>
-["matrix_2d_array.LeetCode.DynamicProgramming.NumMatrix", "sumRegion", "sumRegion", "sumRegion"]
+["matrix_2d_array.LeetCode.TopicWiseSolutions.DynamicProgramming.NumMatrix", "sumRegion", "sumRegion", "sumRegion"]
 [[[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]], [2, 1, 4, 3], [1, 1, 2, 2], [1, 2, 2, 4]]
 <strong>Output</strong>
 [null, 8, 11, 12]
 </pre>
 
 <strong>Explanation</strong>
-matrix_2d_array.LeetCode.DynamicProgramming.NumMatrix numMatrix = new matrix_2d_array.LeetCode.DynamicProgramming.NumMatrix([[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]);
+matrix_2d_array.LeetCode.TopicWiseSolutions.DynamicProgramming.NumMatrix numMatrix = new matrix_2d_array.LeetCode.TopicWiseSolutions.DynamicProgramming.NumMatrix([[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]);
 numMatrix.sumRegion(2, 1, 4, 3); // return 8 (i.e sum of the red rectangle)
 numMatrix.sumRegion(1, 1, 2, 2); // return 11 (i.e sum of the green rectangle)
 numMatrix.sumRegion(1, 2, 2, 4); // return 12 (i.e sum of the blue rectangle)

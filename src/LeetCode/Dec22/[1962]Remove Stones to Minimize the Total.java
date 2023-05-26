@@ -53,7 +53,7 @@ import java.util.PriorityQueue;
  * 1 <= k <= 10⁵
  *
  *
- * Related Topics Array Heap (Priority Queue) 👍 1330 👎 113
+ * Related Topics Array Heap (Priority TopicWiseSolutions.Strings.Queue) 👍 1330 👎 113
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

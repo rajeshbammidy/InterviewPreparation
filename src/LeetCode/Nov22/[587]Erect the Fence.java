@@ -37,7 +37,7 @@ import java.util.*;
  * All the given points are unique.
  *
  *
- * Related Topics Array Math Geometry 👍 1096 👎 565
+ * Related Topics Array TopicWiseSolutions.Strings.Math Geometry 👍 1096 👎 565
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

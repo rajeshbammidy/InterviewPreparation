@@ -38,4 +38,4 @@
  <li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Divide and Conquer</li><li>Dynamic Programming</li><li>Queue</li><li>Monotonic Queue</li></div></div><br><div><li>👍 5404</li><li>👎 233</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Divide and Conquer</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Strings.Queue</li><li>Monotonic TopicWiseSolutions.Strings.Queue</li></div></div><br><div><li>👍 5404</li><li>👎 233</li></div>

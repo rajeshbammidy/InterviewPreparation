@@ -68,7 +68,7 @@ import java.util.*;
  *
  *
  * Related Topics Dynamic Programming Depth-First Search Breadth-First Search
- * Graph Heap (Priority Queue) Shortest Path 👍 7254 👎 316
+ * Graph Heap (Priority TopicWiseSolutions.Strings.Queue) Shortest Path 👍 7254 👎 316
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

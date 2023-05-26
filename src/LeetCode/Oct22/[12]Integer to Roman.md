@@ -54,4 +54,4 @@ M             1000</pre>
  <li><code>1 &lt;= num &lt;= 3999</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Hash Table</li><li>Math</li><li>String</li></div></div><br><div><li>👍 4677</li><li>👎 4765</li></div>
+<div><div>Related Topics</div><div><li>Hash Table</li><li>TopicWiseSolutions.Strings.Math</li><li>String</li></div></div><br><div><li>👍 4677</li><li>👎 4765</li></div>

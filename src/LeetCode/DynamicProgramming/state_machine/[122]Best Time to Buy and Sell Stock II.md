@@ -40,4 +40,4 @@ Total profit is 4.
  <li><code>0 &lt;= prices[i] &lt;= 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>Greedy</li></div></div><br><div><li>👍 10146</li><li>👎 2493</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Dynamic Programming</li><li>TopicWiseSolutions.Greedy</li></div></div><br><div><li>👍 10146</li><li>👎 2493</li></div>

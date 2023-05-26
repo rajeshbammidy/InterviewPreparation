@@ -40,7 +40,7 @@ import java.util.*;
  * 1 <= wi, hi <= 10⁵
  *
  *
- * Related Topics Array Binary Search Dynamic Programming Sorting 👍 4807 👎 115
+ * Related Topics Array Binary Search Dynamic Programming TopicWiseSolutions.Strings.Sorting 👍 4807 👎 115
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

@@ -50,7 +50,7 @@ package LeetCode.Oct22;//You are given an array of strings words. Each element o
 // words[i] consists of lowercase English letters. 
 // 
 //
-// Related Topics Array Hash Table String Greedy Counting 👍 1887 👎 37
+// Related Topics Array Hash Table String TopicWiseSolutions.Greedy Counting 👍 1887 👎 37
 
 
 import java.util.HashMap;

@@ -40,4 +40,4 @@ The maximum number is 9969.
  <li><code>num</code>&nbsp;consists of only <code>6</code> and <code>9</code> digits.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Math</li><li>Greedy</li></div></div><br><div><li>👍 1931</li><li>👎 172</li></div>
+<div><div>Related Topics</div><div><li>TopicWiseSolutions.Strings.Math</li><li>TopicWiseSolutions.Greedy</li></div></div><br><div><li>👍 1931</li><li>👎 172</li></div>

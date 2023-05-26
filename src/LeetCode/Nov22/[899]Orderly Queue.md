@@ -31,4 +31,4 @@ In the second move, we move the 3<sup>rd</sup> character 'c' to the end, obtaini
  <li><code>s</code> consist of lowercase English letters.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Math</li><li>String</li><li>Sorting</li></div></div><br><div><li>👍 1212</li><li>👎 520</li></div>
+<div><div>Related Topics</div><div><li>TopicWiseSolutions.Strings.Math</li><li>String</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 1212</li><li>👎 520</li></div>

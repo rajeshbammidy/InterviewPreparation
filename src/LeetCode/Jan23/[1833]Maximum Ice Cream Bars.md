@@ -41,4 +41,4 @@
  <li><code>1 &lt;= coins &lt;= 10<sup>8</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Greedy</li><li>Sorting</li></div></div><br><div><li>👍 843</li><li>👎 377</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Greedy</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 843</li><li>👎 377</li></div>

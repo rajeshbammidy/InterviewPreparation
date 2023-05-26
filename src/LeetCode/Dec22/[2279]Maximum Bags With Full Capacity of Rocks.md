@@ -42,4 +42,4 @@ Note that we did not use all of the additional rocks.
  <li><code>1 &lt;= additionalRocks &lt;= 10<sup>9</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Greedy</li><li>Sorting</li></div></div><br><div><li>👍 1301</li><li>👎 59</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Greedy</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 1301</li><li>👎 59</li></div>

@@ -44,7 +44,7 @@ package LeetCode.DynamicProgramming.partition_dp;
  * is less than 2³¹).
  *
  *
- * Related Topics Dynamic Programming Stack Greedy Monotonic Stack 👍 3697 👎 246
+ * Related Topics Dynamic Programming Stack TopicWiseSolutions.Greedy Monotonic Stack 👍 3697 👎 246
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

@@ -37,4 +37,4 @@
  <li><code>1 &lt;= k &lt;= 2<sup>31</sup> - 1</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>Math</li><li>Prefix Sum</li></div></div><br><div><li>👍 3832</li><li>👎 379</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>TopicWiseSolutions.Strings.Math</li><li>Prefix Sum</li></div></div><br><div><li>👍 3832</li><li>👎 379</li></div>

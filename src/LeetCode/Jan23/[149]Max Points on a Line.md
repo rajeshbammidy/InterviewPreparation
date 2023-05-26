@@ -25,4 +25,4 @@
  <li>All the <code>points</code> are <strong>unique</strong>.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>Math</li><li>Geometry</li></div></div><br><div><li>👍 1812</li><li>👎 268</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>TopicWiseSolutions.Strings.Math</li><li>Geometry</li></div></div><br><div><li>👍 1812</li><li>👎 268</li></div>

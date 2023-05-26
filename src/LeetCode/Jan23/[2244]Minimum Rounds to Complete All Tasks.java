@@ -45,7 +45,7 @@ import java.util.Map;
  * 1 <= tasks[i] <= 10⁹
  *
  *
- * Related Topics Array Hash Table Greedy Counting 👍 2183 👎 60
+ * Related Topics Array Hash Table TopicWiseSolutions.Greedy Counting 👍 2183 👎 60
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

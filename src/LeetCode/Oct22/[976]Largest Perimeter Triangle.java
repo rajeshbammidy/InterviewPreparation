@@ -25,7 +25,7 @@ package LeetCode.Oct22;//Given an integer array nums, return the largest perimet
 // 1 <= nums[i] <= 10⁶ 
 // 
 //
-// Related Topics Array Math Greedy Sorting 👍 2086 👎 286
+// Related Topics Array TopicWiseSolutions.Strings.Math TopicWiseSolutions.Greedy TopicWiseSolutions.Strings.Sorting 👍 2086 👎 286
 
 
 import java.util.Arrays;

@@ -63,7 +63,7 @@ package LeetCode.FEB23;
  * 2 <= n <= 5 * 10⁹
  *
  *
- * Related Topics Array Greedy Heap (Priority Queue) Ordered Set 👍 2560 👎 134
+ * Related Topics Array TopicWiseSolutions.Greedy Heap (Priority TopicWiseSolutions.Strings.Queue) Ordered Set 👍 2560 👎 134
  */
 
 import java.util.*;

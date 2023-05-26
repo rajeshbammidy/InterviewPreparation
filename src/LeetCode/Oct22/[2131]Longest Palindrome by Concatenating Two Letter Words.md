@@ -43,4 +43,4 @@ Note that "ll" is another longest palindrome that can be created, and so is "xx"
  <li><code>words[i]</code> consists of lowercase English letters.</li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>String</li><li>Greedy</li><li>Counting</li></div></div><br><div><li>👍 1887</li><li>👎 37</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>String</li><li>TopicWiseSolutions.Greedy</li><li>Counting</li></div></div><br><div><li>👍 1887</li><li>👎 37</li></div>

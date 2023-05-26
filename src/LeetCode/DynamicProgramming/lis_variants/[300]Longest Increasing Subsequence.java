@@ -52,13 +52,13 @@ class Solution300 {
      *
      * public int lengthOfLIS(int[] nums) {
      * int dp[] = new int[nums.length];
-     * Arrays.fill(dp, 1);
+     * TopicWiseSolutions.Strings.Arrays.fill(dp, 1);
      * int maxLen = 1;
      * for (int i = 0; i < dp.length; i++) {
      * for (int j = 0; j < i; j++) {
      * if (nums[j] < nums[i]) {
-     * dp[i] = Math.max(dp[i], dp[j] + 1);
-     * maxLen = Math.max(dp[i], maxLen);
+     * dp[i] = TopicWiseSolutions.Strings.Math.max(dp[i], dp[j] + 1);
+     * maxLen = TopicWiseSolutions.Strings.Math.max(dp[i], maxLen);
      * }
      * }
      * }

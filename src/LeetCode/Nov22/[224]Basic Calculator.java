@@ -44,7 +44,7 @@ import java.util.Stack;
  * Every number and running calculation will fit in a signed 32-bit integer.
  *
  *
- * Related Topics Math String Stack Recursion 👍 4799 👎 364
+ * Related Topics TopicWiseSolutions.Strings.Math String Stack TopicWiseSolutions.Strings.Recursion 👍 4799 👎 364
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

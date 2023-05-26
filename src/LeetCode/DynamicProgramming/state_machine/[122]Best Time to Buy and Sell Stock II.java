@@ -49,7 +49,7 @@ package LeetCode.DynamicProgramming.state_machine;
  * 0 <= prices[i] <= 10⁴
  *
  *
- * Related Topics Array Dynamic Programming Greedy 👍 10146 👎 2493
+ * Related Topics Array Dynamic Programming TopicWiseSolutions.Greedy 👍 10146 👎 2493
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

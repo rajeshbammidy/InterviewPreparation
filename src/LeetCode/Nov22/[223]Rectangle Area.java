@@ -36,7 +36,7 @@ package LeetCode.Nov22;
  * -10⁴ <= by1 <= by2 <= 10⁴
  * <p>
  * <p>
- * Related Topics Math Geometry 👍 1592 👎 1507
+ * Related Topics TopicWiseSolutions.Strings.Math Geometry 👍 1592 👎 1507
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

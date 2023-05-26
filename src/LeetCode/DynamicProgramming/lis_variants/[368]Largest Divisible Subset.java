@@ -35,7 +35,7 @@ package LeetCode.DynamicProgramming.lis_variants; /**
  * All the integers in nums are unique.
  *
  *
- * Related Topics Array Math Dynamic Programming Sorting 👍 3982 👎 165
+ * Related Topics Array TopicWiseSolutions.Strings.Math Dynamic Programming TopicWiseSolutions.Strings.Sorting 👍 3982 👎 165
  */
 
 //leetcode submit region begin(Prohibit modification and deletion)

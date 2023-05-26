@@ -55,4 +55,4 @@ Thus, on day 2, all the seeds are blooming.
  <li><code>1 &lt;= plantTime[i], growTime[i] &lt;= 10<sup>4</sup></code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>Array</li><li>Greedy</li><li>Sorting</li></div></div><br><div><li>👍 1185</li><li>👎 67</li></div>
+<div><div>Related Topics</div><div><li>Array</li><li>TopicWiseSolutions.Greedy</li><li>TopicWiseSolutions.Strings.Sorting</li></div></div><br><div><li>👍 1185</li><li>👎 67</li></div>
