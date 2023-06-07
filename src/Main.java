@@ -2,44 +2,76 @@
 
 import javafx.util.Pair;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.*;
 import java.util.stream.Stream;
 
 public class Main {
-    public static int longestOnes(int[] A, int K) {
-        int i = 0, j;
-        for (j = 0; j < A.length; ++j) {
-            if (A[j] == 0) K--;
-            if (K < 0 && A[i++] == 0) K++;
+
+    static class Node {
+        public Node(String end, double cost) {
+            this.end = end;
+            this.cost = cost;
         }
-        return j - i;
+        String end;
+        double cost;
+
     }
 
-    public static void main(String[] args) {
-        int nums[] = {};
-        int value = longestOnes(new int[]{}, 3);
+    static double maxCost = -1.0;
 
+    public static void main(String[] args) throws Exception {
+        InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
+        BufferedReader in = new BufferedReader(reader);
+        String line;
         int i = 0;
-        int sum = 0;
-        int k = 3;
-        int count = 0;
-        while (i < nums.length && sum < value && k > 0) {
-            if (nums[i] == 0) {
-                k--;
+        HashMap<String, ArrayList<Node>> graph = new HashMap<>();
+        String source = "";
+        String target = "";
+
+        maxCost = -1.0;
+        while ((line = in.readLine()) != null) {
+            if (i == 0) {
+                String semiDelimeter[] = line.split(";");
+                for (String sed : semiDelimeter) {
+                    String comDelimeter[] = sed.split(",");
+                    String src = comDelimeter[0];
+                    String dest = comDelimeter[1];
+                    double cost = Double.parseDouble(comDelimeter[2]);
+                    if (graph.get(src) == null) graph.put(src, new ArrayList<>());
+                    graph.get(src).add(new Node(dest, cost));
+                }
+
+            } else if (i == 1) {
+                source = line;
+
+            } else {
+                target = line;
             }
-            sum++;
         }
-        if (sum == value) count++;
+        HashSet<String> visited = new HashSet<>();
 
+        dfs(graph, source, target, 1, visited);
+        System.out.println(maxCost);
 
+    }
 
+    private static void dfs(HashMap<String, ArrayList<Node>> graph, String source, String target, double cost, HashSet<String> visited) {
+        visited.add(source);
+        if (source.equals(target)) {
+            maxCost = Math.max(maxCost, cost);
+        }
+        if (!graph.containsKey(source)) return;
+
+        for (Node node : graph.get(source)) {
+            if (!visited.contains(node.end)) {
+                dfs(graph, node.end, target, cost * node.cost, visited);
+            }
+        }
+        visited.remove(source);
     }
 }
-
-
-// This code is contributed by hritikrommie
-
-
-
