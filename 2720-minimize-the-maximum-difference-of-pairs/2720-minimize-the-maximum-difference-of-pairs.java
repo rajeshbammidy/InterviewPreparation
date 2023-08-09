@@ -1,5 +1,12 @@
 class Solution {
 
+    /**
+    Intution:
+    1.Since they are asking min difference we should sort the array
+    2. After sorting, we may take the consective abosolute difference and store it in maxHeap to find the max of min's.But it would be difficult to find the p such minimum pairs
+    [3,4,2,3,2,1,2] -> [1,2,2,2,3,3,4]
+    3.So we binarySearch on the answer.
+     */
     static boolean isPossible(int nums[], long diff, int p) {
         int currentPairs = 0;
         int n = nums.length;
